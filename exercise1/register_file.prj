@@ -1,0 +1,2 @@
+vhdl work "../../FPGA/support_files/support_files/hardware/mips_constant_pkg.vhd"
+vhdl work "../../FPGA/support_files/support_files/hardware/register_file.vhd"
