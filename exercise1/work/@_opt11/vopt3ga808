@@ -1,0 +1,180 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\TDT4255\exercise1
+T_opt
+Z1 Vfdm0ADSg>_4=>YYA>5di03
+Z2 04 5 8 work tb_pc behavior 1
+Z3 =1-00215a5a7e04-505c48d1-190-4a8
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.6d;45
+Z7 dZ:\TDT4255\exercise1
+T_opt10
+Z8 V1IheJYHPL@3E2mF22?cAb1
+Z9 04 13 8 work tb_signextend behavior 1
+Z10 =1-00215a613036-505dcdbe-63-d34
+Z11 o-quiet -auto_acc_if_foreign -work work +acc
+Z12 n@_opt10
+R6
+R7
+T_opt11
+Z13 V[Kn6R<;:nLdfoHzCWSIeY3
+R9
+Z14 =1-00215a5fc0f2-505f3eab-8b-cf4
+R11
+Z15 n@_opt11
+R6
+R7
+T_opt2
+Z16 Vnd6PPH1z3c1L8fjVJ`EO92
+R2
+Z17 =1-00215a5a7e04-505c4cda-179-ac8
+R4
+Z18 n@_opt2
+R6
+R7
+T_opt3
+Z19 VLXI5BM3jTjOUnIh08:l[f0
+R2
+Z20 =1-00215a5a7e04-505c4efb-1cf-e30
+R4
+Z21 n@_opt3
+R6
+R7
+T_opt4
+Z22 V0a1d^H1LaR02FDHD`TL2j0
+R2
+Z23 =1-00215a5a7e04-505c5071-2fd-960
+R4
+Z24 n@_opt4
+R6
+R7
+T_opt5
+Z25 Vf]I_@0E[0nhKlGQ_=S8741
+R2
+Z26 =1-00215a5a7e04-505c5131-ed-830
+R4
+Z27 n@_opt5
+R6
+R7
+T_opt9
+Z28 VlKm>cWM2aemjknRVm]P_g0
+R9
+Z29 =1-00215a613036-505dcd3a-cc-f50
+R11
+Z30 n@_opt9
+R6
+R7
+Epc
+Z31 w1347955941
+Z32 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z33 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R7
+Z34 8Z:/TDT4255/exercise1/pc.vhd
+Z35 FZ:/TDT4255/exercise1/pc.vhd
+l0
+L29
+Z36 VAk@MhT0Qb]C6W<DYC`d<00
+Z37 OE;C;6.6d;45
+32
+Z38 o-work work
+Z39 tExplicit 1
+Z40 !s100 ]P_H^jm3R<8RUIWH]dNi[0
+Abehavioral
+R32
+R33
+Z41 DEx4 work 2 pc 0 22 Ak@MhT0Qb]C6W<DYC`d<00
+l41
+L39
+Z42 V?KWbF0HnKklJd9B5ZVRFl0
+R37
+32
+Z43 Mx2 4 ieee 14 std_logic_1164
+Z44 Mx1 4 ieee 11 numeric_std
+R38
+R39
+Z45 !s100 Z8:MlgJRYdAH]=D]`8f2N1
+Esignextend
+Z46 w1348075758
+Z47 DPx22 C:\modeltech_6.6d\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z48 DPx22 C:\modeltech_6.6d\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+R7
+Z49 8SignExtend.vhd
+Z50 FSignExtend.vhd
+l0
+L29
+Z51 VIoRz21Fn6=afAa8eXSmX;2
+R37
+Z52 o-explicit -93
+Z53 tExplicit 1 NoCoverage 1
+Z54 !s100 e9XZ=cfeGAdT<gg9_k8Qc3
+Abehavioral
+R47
+R48
+Z55 DEx25 Z:\TDT4255\exercise1\work 10 signextend 0 22 IoRz21Fn6=afAa8eXSmX;2
+31
+Mx2 22 C:\modeltech_6.6d\ieee 14 std_logic_1164
+Mx1 22 C:\modeltech_6.6d\ieee 11 numeric_std
+l36
+L35
+Z56 V1V=Qaf;z@[o]C16M@RXUF2
+R37
+R52
+R53
+Z57 !s100 j0CF6cQFIiKYK4mLYkbk21
+Etb_pc
+Z58 w1348227531
+R33
+R7
+Z59 8Z:/TDT4255/exercise1/tb_pc.vhd
+Z60 FZ:/TDT4255/exercise1/tb_pc.vhd
+l0
+L35
+Z61 VIPn9?X]Kdcj>O1G2zlAkg3
+R37
+32
+R38
+R39
+Z62 !s100 bDDSWNde8A1_bQ@XN8j_P0
+Abehavior
+R33
+Z63 DEx4 work 5 tb_pc 0 22 IPn9?X]Kdcj>O1G2zlAkg3
+l63
+L38
+Z64 VJSmV7=FkfclJ49l`>X@AN1
+R37
+32
+Z65 Mx1 4 ieee 14 std_logic_1164
+R38
+R39
+Z66 !s100 Z;X:jJBL<^2ebbkz?F>n02
+Etb_signextend
+Z67 w1348324908
+R48
+31
+R7
+Z68 8tb_SignExtend.vhd
+Z69 Ftb_SignExtend.vhd
+l0
+L35
+Z70 VV8EVaT6eP<H4MAGAU8UZB1
+R37
+R52
+R53
+Z71 !s100 gB7dFmPHcmi3:l=;GA1zg2
+Abehavior
+R55
+R48
+DEx25 Z:\TDT4255\exercise1\work 13 tb_signextend 0 22 V8EVaT6eP<H4MAGAU8UZB1
+31
+Mx1 22 C:\modeltech_6.6d\ieee 14 std_logic_1164
+l60
+L38
+Z72 VVJb4=9[T?9M<U?^>U2SCi3
+R37
+R52
+R53
+Z73 !s100 J6MBiFdhOdWnUCiQHQKRJ0

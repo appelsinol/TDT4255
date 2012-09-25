@@ -22,16 +22,130 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ComputerDesignEx1.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="SignExtend.fdo"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtend.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SignExtend.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="SignExtend.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignShiftLeft2.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SignShiftLeft2.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="SignShiftLeft2.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="alu.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="alu.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="alu.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alu.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="alu_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="alu_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="com.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="com.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="com.xst"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="compxlib.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="pc.fdo"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pc.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="pc.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="pc.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="processor.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="processor.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="processor.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="register_file.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="register_file.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="register_file.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_SignExtend.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_pc.fdo"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_toplevel.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="tb_toplevel.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="tb_toplevel.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1348323946" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="7616047539597174666" xil_pn:start_ts="1348323888">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="compxlib.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1348224970" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1348224970">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1348324765" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1348324765">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="SignExtend.vhd"/>
+      <outfile xil_pn:name="SignShiftLeft2.vhd"/>
+      <outfile xil_pn:name="hardware/adder.vhd"/>
+      <outfile xil_pn:name="hardware/alu.vhd"/>
+      <outfile xil_pn:name="hardware/alu_1bit.vhd"/>
+      <outfile xil_pn:name="hardware/com.vhd"/>
+      <outfile xil_pn:name="hardware/full_adder.vhd"/>
+      <outfile xil_pn:name="hardware/memory.vhd"/>
+      <outfile xil_pn:name="hardware/mips_constant_pkg.vhd"/>
+      <outfile xil_pn:name="hardware/register_file.vhd"/>
+      <outfile xil_pn:name="hardware/tb_toplevel.vhd"/>
+      <outfile xil_pn:name="hardware/toplevel.vhd"/>
+      <outfile xil_pn:name="pc.vhd"/>
+      <outfile xil_pn:name="processor.vhd"/>
+      <outfile xil_pn:name="tb_SignExtend.vhd"/>
+      <outfile xil_pn:name="tb_pc.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1348419225" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3203711136551304732" xil_pn:start_ts="1348419225">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1348419225" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6954937824623162726" xil_pn:start_ts="1348419225">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1348224970" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2903269171497721073" xil_pn:start_ts="1348224970">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1348324765" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1348324765">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="SignExtend.vhd"/>
+      <outfile xil_pn:name="SignShiftLeft2.vhd"/>
+      <outfile xil_pn:name="hardware/adder.vhd"/>
+      <outfile xil_pn:name="hardware/alu.vhd"/>
+      <outfile xil_pn:name="hardware/alu_1bit.vhd"/>
+      <outfile xil_pn:name="hardware/com.vhd"/>
+      <outfile xil_pn:name="hardware/full_adder.vhd"/>
+      <outfile xil_pn:name="hardware/memory.vhd"/>
+      <outfile xil_pn:name="hardware/mips_constant_pkg.vhd"/>
+      <outfile xil_pn:name="hardware/register_file.vhd"/>
+      <outfile xil_pn:name="hardware/tb_toplevel.vhd"/>
+      <outfile xil_pn:name="hardware/toplevel.vhd"/>
+      <outfile xil_pn:name="pc.vhd"/>
+      <outfile xil_pn:name="processor.vhd"/>
+      <outfile xil_pn:name="tb_SignExtend.vhd"/>
+      <outfile xil_pn:name="tb_pc.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1348419226" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="889151390353550919" xil_pn:start_ts="1348419225">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="SignExtend.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1348225159" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1348225159">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1348225165" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7640564188788611706" xil_pn:start_ts="1348225165">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
 
 </generated_project>

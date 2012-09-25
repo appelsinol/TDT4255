@@ -1,0 +1,6 @@
+vhdl work "processor.vhd"
+vhdl work "hardware/mips_constant_pkg.vhd"
+vhdl work "hardware/memory.vhd"
+vhdl work "hardware/com.vhd"
+vhdl work "hardware/toplevel.vhd"
+vhdl work "hardware/tb_toplevel.vhd"

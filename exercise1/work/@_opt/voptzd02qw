@@ -1,0 +1,71 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\TDT4255\exercise1
+T_opt
+Z1 Vfdm0ADSg>_4=>YYA>5di03
+Z2 04 5 8 work tb_pc behavior 1
+Z3 =1-00215a5a7e04-505c48d1-190-4a8
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.6d;45
+Z7 dZ:\TDT4255\exercise1
+Epc
+Z8 w1347955941
+Z9 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R7
+Z11 8Z:/TDT4255/exercise1/pc.vhd
+Z12 FZ:/TDT4255/exercise1/pc.vhd
+l0
+L29
+Z13 VAk@MhT0Qb]C6W<DYC`d<00
+Z14 OE;C;6.6d;45
+32
+Z15 o-work work
+Z16 tExplicit 1
+Z17 !s100 ]P_H^jm3R<8RUIWH]dNi[0
+Abehavioral
+R9
+R10
+Z18 DEx4 work 2 pc 0 22 Ak@MhT0Qb]C6W<DYC`d<00
+l41
+L39
+Z19 V?KWbF0HnKklJd9B5ZVRFl0
+R14
+32
+Z20 Mx2 4 ieee 14 std_logic_1164
+Z21 Mx1 4 ieee 11 numeric_std
+R15
+R16
+Z22 !s100 Z8:MlgJRYdAH]=D]`8f2N1
+Etb_pc
+Z23 w1348225293
+Z24 DPx22 C:\modeltech_6.6d\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z25 8Z:/TDT4255/exercise1/tb_pc.vhd
+Z26 FZ:/TDT4255/exercise1/tb_pc.vhd
+l0
+L35
+Z27 VIPn9?X]Kdcj>O1G2zlAkg3
+R14
+R15
+R16
+Z28 !s100 bDDSWNde8A1_bQ@XN8j_P0
+Abehavior
+DPx22 C:\modeltech_6.6d\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+DEx25 Z:\TDT4255\exercise1\work 2 pc 0 22 Ak@MhT0Qb]C6W<DYC`d<00
+R24
+DEx25 Z:\TDT4255\exercise1\work 5 tb_pc 0 22 IPn9?X]Kdcj>O1G2zlAkg3
+32
+Mx2 22 C:\modeltech_6.6d\ieee 14 std_logic_1164
+Mx1 22 C:\modeltech_6.6d\ieee 11 numeric_std
+l63
+L38
+Z29 V]MAjl@zfb>JAjhYUM9M[`2
+R14
+R15
+R16
+Z30 !s100 o?R_n4zhGICWD0W=eE@SW3

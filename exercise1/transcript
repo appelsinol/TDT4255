@@ -1,0 +1,42 @@
+# //  ModelSim SE 6.6d Nov  1 2010 
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do \{do \{SignExtend.fdo\}\} 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-19) Failed to access library 'work.{SignExtend' at "work.{SignExtend".
+# No such file or directory. (errno = ENOENT)
+# ** Error: Library work.{SignExtend not found.
+# Error loading design
+do tb_SignExtend.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_signextend
+# -- Compiling architecture behavior of tb_signextend
+# ** Warning: [4] tb_SignExtend.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_SignExtend 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_signextend(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.signextend(behavioral)#1
+# Updating msgviewer database...
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Updating msgviewer database...
