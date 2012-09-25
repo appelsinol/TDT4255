@@ -129,6 +129,25 @@ architecture Behavioral of processor is
 	);
 	end component adder;
 	
+-- Component ALUcontrol
+
+	component ALUControl is
+	PORT(
+		instr_15_0 : in STD_LOGIC_VECTOR(15 downto 0);
+		ALUop : in STD_LOGIC_VECTOR(1 downto 0);
+		ALUopcode : out ALU_INPUT;
+	);
+	end component ALUControl;
+	
+-- component Jumpshift
+component JumpShift is
+	PORT(
+		pc_4_instruction : in STD_LOGIC_VECTOR(31 downto 0);
+		immediate_ins : in STD_LOGIC_VECTOR(25 downto 0);
+		after_shift_instruction : out STD_LOGIC_VECTOR(31 downto 0)
+		);
+end component JumpShift;
+	
 -- control signal for the ALU control unit
 	signal ins_31_26 : STD_LOGIC_VECTOR (5 downto 0);
 	
@@ -169,7 +188,7 @@ architecture Behavioral of processor is
 	signal after_shift_adder_signal: STD_LOGIC_VECTOR(31 downto 0);
 	
 	
-begin
+
 
 
 end Behavioral;

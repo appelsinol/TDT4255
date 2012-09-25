@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library WORK;
+use WORK.MIPS_CONSTANT_PKG.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,7 +32,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ControlUnit is
-    Port ( opcode : in  STD_LOGIC_VECTOR (5 downto 0);
+
+    Port ( 
+		     clk : in STD_LOGIC;
+	        reset : in STD_LOGIC;
+			  opcode : in  STD_LOGIC_VECTOR (5 downto 0);
            RegDst : out  STD_LOGIC;
 			  ALUSrc : out  STD_LOGIC;
 			  MemtoReg : out  STD_LOGIC;
@@ -39,16 +45,34 @@ entity ControlUnit is
 			  MemWrite : out  STD_LOGIC;
            Branch : out  STD_LOGIC;
            ALUOp : out  STD_LOGIC_VECTOR(1 downto 0);
-           Jump : out STD_LOGIC);
+           Jump : out STD_LOGIC;
+			  pc_en : out STD_LOGIC);
+			  
 end ControlUnit;
+
+
 
 architecture Behavioral of ControlUnit is
 
 -- signal allocation according from the book
+signal current_state,next_state:state_type;
+
+
 
 begin
-	control_process : process(opcode)
+		state_process : process(clk,reset)
+		begin
+		if (reset='1') then
+			current_state <= EXEC;  --default state on reset.
+		elsif (rising_edge(clk)) then
+			current_state <= next_state; 			--state change.
+		end if;
+end process;
+				
+
+	control_process : process(current_state,opcode)
 	begin
+	if(current_state = EXEC) then
 		if opcode = "000000" then -- control signal for R instructions.
 			  RegDst <= '1';
 			  ALUSrc <= '0';
@@ -57,8 +81,11 @@ begin
 			  MemRead <= '0';
 			  MemWrite <= '0';
 			  Branch <= '0';
-			  AlUOp <= "10";
+			  ALUOp <= "10";
 			  Jump <= '0';
+			  next_state <= EXEC;
+			  pc_en <= '1';
+			  
 		elsif opcode = "100011" then   -- control signal for load word.
 			  RegDst <= '0';
 			  ALUSrc <= '1';
@@ -67,8 +94,10 @@ begin
 			  MemRead <= '1';
 			  MemWrite <= '0';
 			  Branch <= '0';
-			  AlUOp <= "00";
+			  ALUOp <= "00";
 			  Jump <= '0';
+			  next_state <= STALL;
+			  pc_en <='0';
        elsif opcode = "101011" then  -- control singal for save word.
 			  RegDst <= '0' or '1';
 			  ALUSrc <= '1';
@@ -77,8 +106,10 @@ begin
 			  MemRead <= '0';
 			  MemWrite <= '0';
 			  Branch <= '1';
-			  AlUOp <= "00";
+			  ALUOp <= "00";
 			  Jump <= '0';
+			  next_state <= STALL;
+			  pc_en <='0';
 		 elsif opcode = "000100" then  -- control singal for beq.
 			  RegDst <= '0' or '1';
 			  ALUSrc <= '0';
@@ -87,8 +118,11 @@ begin
 			  MemRead <= '0';
 			  MemWrite <= '0';
 			  Branch <= '1';
-			  AlUOp <= "01";
+			  ALUOp <= "01";
 			  Jump <= '0';
+			   next_state <= EXEC;
+				pc_en <='1';
+				
 		 else --opcode = "000010" then  -- control singal for jump.
 			  RegDst <= '0';
 			  ALUSrc <= '0';
@@ -97,9 +131,17 @@ begin
 			  MemRead <= '0';
 			  MemWrite <= '0';
 			  Branch <= '0';
-			  AlUOp <= "00";
+			  ALUOp <= "00";
 			  Jump <= '1';
+			  next_state <= EXEC;
+			  pc_en <='1';
+			  
 		end if;
+	elsif(current_state = STALL) then
+          next_state<= EXEC;
+			 pc_en <='1';
+	end if;
+		
 		
 	end process;
 

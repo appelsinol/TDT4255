@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-09-23T18:53:09</DateModified>
+  <DateModified>2012-09-25T10:35:38</DateModified>
   <ModuleName>alu</ModuleName>
   <SummaryTimeStamp>2012-09-21T13:22:47</SummaryTimeStamp>
-  <SavedFilePath>Z:/TDT4255/exercise1/iseconfig/alu.xreport</SavedFilePath>
+  <SavedFilePath>//sambaad.stud.ntnu.no/lichao/TDT4255/exercise1/iseconfig/alu.xreport</SavedFilePath>
   <ImplementationReportsDirectory>Z:/TDT4255/exercise1\</ImplementationReportsDirectory>
   <DateInitialized>2012-09-21T14:15:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>

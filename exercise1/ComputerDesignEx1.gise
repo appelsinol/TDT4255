@@ -22,9 +22,15 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ComputerDesignEx1.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALUControl.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALUControl.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALUControl.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="JumpShift.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="JumpShift.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="JumpShift.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="SignExtend.fdo"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtend.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SignExtend.stx"/>
@@ -80,6 +86,11 @@
     <transform xil_pn:end_ts="1348324765" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1348324765">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
       <outfile xil_pn:name="SignExtend.vhd"/>
       <outfile xil_pn:name="SignShiftLeft2.vhd"/>
@@ -113,6 +124,11 @@
     <transform xil_pn:end_ts="1348324765" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1348324765">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
       <outfile xil_pn:name="SignExtend.vhd"/>
       <outfile xil_pn:name="SignShiftLeft2.vhd"/>
@@ -134,6 +150,9 @@
     <transform xil_pn:end_ts="1348419226" xil_pn:in_ck="2197515141225122224" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="889151390353550919" xil_pn:start_ts="1348419225">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="SignExtend.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
