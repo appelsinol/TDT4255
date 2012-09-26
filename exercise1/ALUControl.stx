@@ -3,16 +3,16 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to Z:/TDT4255/exercise1/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to Z:/TDT4255/exercise1/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
---> Reading design: ControlUnit.prj
+--> Reading design: ALUControl.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -41,17 +41,17 @@ TABLE OF CONTENTS
 =========================================================================
 Parsing VHDL file "\TDT4255\exercise1\hardware/mips_constant_pkg.vhd" into library work
 Parsing package <MIPS_CONSTANT_PKG>.
-Parsing VHDL file "\TDT4255\exercise1\ControlUnit.vhd" into library work
-Parsing entity <ControlUnit>.
-Parsing architecture <Behavioral> of entity <controlunit>.
+Parsing VHDL file "\TDT4255\exercise1\ALUControl.vhd" into library work
+Parsing entity <ALUControl>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.16 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.15 secs
  
 --> 
 
-Total memory usage is 183688 kilobytes
+Total memory usage is 183240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

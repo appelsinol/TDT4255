@@ -14,13 +14,13 @@
          <ClosedNode>/tb_toplevel - behavior Z:|FPGA|support_files|support_files|hardware|tb_toplevel.vhd/uut - toplevel - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>JumpShift - Behavioral (Z:/TDT4255/exercise1/JumpShift.vhd)</SelectedItem>
+         <SelectedItem>MIPS_SC_PROCESSOR - processor - Behavioral (Z:/TDT4255/exercise1/processor.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a7000000020000000000000000000000000000000064ffffffff000000810000000000000002000001a70000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>JumpShift - Behavioral (Z:/TDT4255/exercise1/JumpShift.vhd)</CurrentItem>
+      <CurrentItem>MIPS_SC_PROCESSOR - processor - Behavioral (Z:/TDT4255/exercise1/processor.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>

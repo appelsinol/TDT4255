@@ -84,6 +84,7 @@ architecture Behavioral of processor is
     Port ( 
 			  clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
+			  pc_en : in STD_LOGIC;
 			  pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
            pc_out : out  STD_LOGIC_VECTOR(31 downto 0));
   end component pc;
@@ -91,6 +92,7 @@ architecture Behavioral of processor is
 -- component ControlUnit
   component ControlUnit is
     Port ( opcode : in  STD_LOGIC_VECTOR (5 downto 0);
+			  pc_en : in STD_LOGIC;
            RegDst : out  STD_LOGIC;
 			  ALUSrc : out  STD_LOGIC;
 			  MemtoReg : out  STD_LOGIC;
@@ -119,7 +121,7 @@ architecture Behavioral of processor is
 
 --Component 2 adders, one for pc increment and one for the branch instruction	
 	component adder is 
-	generic (N: natural);    
+	generic (N: natural:= 32);    
 	port(
 		X	: in	STD_LOGIC_VECTOR(N-1 downto 0);
 		Y	: in	STD_LOGIC_VECTOR(N-1 downto 0);
@@ -135,7 +137,7 @@ architecture Behavioral of processor is
 	PORT(
 		instr_15_0 : in STD_LOGIC_VECTOR(15 downto 0);
 		ALUop : in STD_LOGIC_VECTOR(1 downto 0);
-		ALUopcode : out ALU_INPUT;
+		ALUopcode : out ALU_INPUT
 	);
 	end component ALUControl;
 	
@@ -144,9 +146,11 @@ component JumpShift is
 	PORT(
 		pc_4_instruction : in STD_LOGIC_VECTOR(31 downto 0);
 		immediate_ins : in STD_LOGIC_VECTOR(25 downto 0);
-		after_shift_instruction : out STD_LOGIC_VECTOR(31 downto 0)
+		after_jump_instruction : out STD_LOGIC_VECTOR(31 downto 0)
 		);
 end component JumpShift;
+
+------- internal signal for connection of component ----------
 	
 -- control signal for the ALU control unit
 	signal ins_31_26 : STD_LOGIC_VECTOR (5 downto 0);
@@ -157,7 +161,7 @@ end component JumpShift;
 	signal ins_15_11_rd : STD_LOGIC_VECTOR(4 downto 0);
 
 -- address for the I type instructions
-	signal ins_address : STD_LOGIC_VECTOR(15 downto 0);
+	signal ins_15_0_add : STD_LOGIC_VECTOR(15 downto 0);
 	
 -- signal after extend
 	signal extened_32_address : STD_LOGIC_VECTOR(31 downto 0);
@@ -165,7 +169,7 @@ end component JumpShift;
 -- signal after left shifting
 	signal after_2_left_shifting : STD_LOGIC_VECTOR(31 downto 0);
 
--- control signal for ALU Control Unit
+-- control signal for Control Unit
 	signal regDst_signal : STD_LOGIC;
 	signal aLUSrc_signal : STD_LOGIC;
 	signal memtoReg_signal : STD_LOGIC;
@@ -176,20 +180,77 @@ end component JumpShift;
 	signal aLUOp_signal : STD_LOGIC_VECTOR(1 downto 0);
 	signal jump_signal : STD_LOGIC;
 
+-- signal for ALUcontrol	
+	signal ALUopcode : ALU_INPUT;
+	
+
 -- other signals
 	signal read_data_1 : STD_LOGIC_VECTOR(31 downto 0);
 	signal read_data_2 : STD_LOGIC_VECTOR(31 downto 0);
 	signal signalToMem_alu_result : STD_LOGIC_VECTOR(31 downto 0);
-	signal 
+
 
 -- signal from pc part
-	signal pc_original : STD_LOGIC_VECTOR(31 downto 0);
-	signal pc_increment : STD_LOGIC_VECTOR(31 downto 0);
+	signal pc_en_signal : STD_LOGIC;
+	signal pc_out_internal : STD_LOGIC_VECTOR(31 downto 0);
+	signal pc_incremented : STD_LOGIC_VECTOR(31 downto 0);
+	signal immediate_address : STD_LOGIC_VECTOR(25 downto 0);
+	signal jumped_instr : STD_LOGIC_VECTOR(31 downto 0);
 	signal after_shift_adder_signal: STD_LOGIC_VECTOR(31 downto 0);
 	
 	
-
-
-
+begin
+	alucontrol_imp : ALUControl
+		PORT MAP(
+		instr_15_0 => ins_15_0_add,
+		ALUop => aLUOp_signal,
+		ALUopcode => ALUopcode  
+		);
+	
+	jumpshift_imp : JumpShift
+		PORT MAP(
+			pc_4_instruction => pc_incremented,
+			after_jump_instruction => jumped_instr,
+			immediate_ins => immediate_address 
+			
+		);
+	
+	adder_increment_4 : adder
+		PORT MAP(
+			X => pc_out_internal,
+			Y => "00000000000000000000000000000100",
+			CIN => '0',
+			COUT => '0',
+			R => pc_incremented
+			);
+	
+	signshiftleft2_imp : SignShiftLeft2
+		PORT MAP(
+			shiftLeftIn => extened_32_address,
+			shiftLeftOut => after_2_left_shifting
+		);
+		
+	signextened_imp : SignExtend
+		PORT MAP(
+			ins_in => ins_15_0_add,
+         extendins_out => extened_32_address
+		);
+		
+	controlunit_imp : ControlUnit
+		PORT MAP(
+			  opcode => ins_31_26,
+			  pc_en => pc_en_signal,
+           RegDst => regDst_signal,
+			  ALUSrc => aLUSrc_signal,
+			  MemtoReg => memtoReg_signal,
+			  RegWrite => regWrite_signal,
+			  MemRead => memRead_signal,
+			  MemWrite => memWrite_signal,
+           Branch => branch_signal,
+           ALUOp => aLUOp_signal,
+           Jump => jump_signal
+		);
+	
+	
 end Behavioral;
 

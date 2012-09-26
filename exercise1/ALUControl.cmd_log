@@ -1,0 +1,1 @@
+vhdtdtfi -prj ComputerDesignEx1 -o Z:/TDT4255/exercise1/ALUControl.vhi -lib work Z:/TDT4255/exercise1//ALUControl.vhd -module ALUControl -template C:/Xilinx/12.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

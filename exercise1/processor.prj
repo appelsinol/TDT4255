@@ -1,2 +1,6 @@
 vhdl work "hardware/mips_constant_pkg.vhd"
+vhdl work "hardware/full_adder.vhd"
+vhdl work "JumpShift.vhd"
+vhdl work "hardware/adder.vhd"
+vhdl work "ALUControl.vhd"
 vhdl work "processor.vhd"
