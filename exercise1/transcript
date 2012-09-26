@@ -8,35 +8,207 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do \{do \{SignExtend.fdo\}\} 
+# vsim -do \{do \{processor.fdo\}\} 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlft07bzxt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft07bzxt
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-19) Failed to access library 'work.{SignExtend' at "work.{SignExtend".
+# ** Error: (vopt-19) Failed to access library 'work.{processor' at "work.{processor".
 # No such file or directory. (errno = ENOENT)
-# ** Error: Library work.{SignExtend not found.
+# ** Error: Library work.{processor not found.
 # Error loading design
-do tb_SignExtend.fdo
-# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/processor.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# ** Error: (vcom-11) Could not find work.mips_constant_pkg.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(24): (vcom-1195) Cannot find expanded name "work.mips_constant_pkg".
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(24): Unknown expanded name.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(35): VHDL Compiler exiting
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/mips_constant_pkg.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/processor.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(255): (vcom-1162) Formal "cout" of mode OUT cannot be associated with an expression.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(264): (vcom-1162) Formal "cout" of mode OUT cannot be associated with an expression.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(400): VHDL Compiler exiting
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/adder.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/alu.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/alu_1bit.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/ALUControl.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# ** Error: Z:/TDT4255/exercise1/ALUControl.vhd(52): (vcom-1167) Index value -1 is out of std.standard.natural range 0 to 2147483647.
+# ** Error: Z:/TDT4255/exercise1/ALUControl.vhd(52): (vcom-1272) Length of expected is 6; length of actual is 7.
+# ** Error: Z:/TDT4255/exercise1/ALUControl.vhd(61): Case statement covers only 5 out of 531441 cases.
+# ** Error: Z:/TDT4255/exercise1/ALUControl.vhd(86): VHDL Compiler exiting
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/com.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity com
+# -- Compiling architecture behavioral of com
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/ControlUnit.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/dgsdg.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity dgsdg
+# -- Compiling architecture behavioral of dgsdg
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/full_adder.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/JumpShift.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity jumpshift
+# -- Compiling architecture behavioral of jumpshift
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/memory.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity memory
+# -- Compiling architecture behavioral of memory
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/mips_constant_pkg.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/pc.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/processor.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(255): (vcom-1162) Formal "cout" of mode OUT cannot be associated with an expression.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(264): (vcom-1162) Formal "cout" of mode OUT cannot be associated with an expression.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(400): VHDL Compiler exiting
+vcom -reportprogress 30 -work work Z:/TDT4255/exercise1/register_file.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+vcom -reportprogress 30 -work work Z:/TDT4255/exercise1/SignExtend.vhd
 # Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity signextend
 # -- Compiling architecture behavioral of signextend
+vcom -reportprogress 30 -work work Z:/TDT4255/exercise1/SignShiftLeft2.vhd
 # Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_signextend
-# -- Compiling architecture behavior of tb_signextend
-# ** Warning: [4] tb_SignExtend.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_SignExtend 
+# -- Compiling entity signshiftleft2
+# -- Compiling architecture behavioral of signshiftleft2
+vcom -reportprogress 300 -work work Z:/TDT4255/exercise1/processor.vhd
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+vsim work.processor
+# vsim work.processor 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlftndehy9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftndehy9
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [1] Z:/TDT4255/exercise1/processor.vhd(240): (vopt-3473) Component instance "alucontrol_imp : alucontrol" is not bound.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(294): (vopt-1134) Incompatible modes for port "pc_en" in component "controlunit" when binding to entity "controlunit".
+# ** Error: Z:/TDT4255/exercise1/ControlUnit.vhd(55): Vopt Compiler exiting
+# Error loading design
+vsim work.processor
+# vsim work.processor 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlft4a5sz3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4a5sz3
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [1] Z:/TDT4255/exercise1/processor.vhd(240): (vopt-3473) Component instance "alucontrol_imp : alucontrol" is not bound.
+# ** Error: Z:/TDT4255/exercise1/processor.vhd(294): (vopt-1134) Incompatible modes for port "pc_en" in component "controlunit" when binding to entity "controlunit".
+# ** Error: Z:/TDT4255/exercise1/ControlUnit.vhd(55): Vopt Compiler exiting
+# Error loading design
+vsim work.tb_toplevel
+# vsim work.tb_toplevel 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlftcet8v6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcet8v6
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [1] Z:/TDT4255/exercise1/tb_toplevel.vhd(112): (vopt-3473) Component instance "uut : toplevel" is not bound.
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_signextend(behavior)#1
-# Loading ieee.numeric_std(body)
-# Loading work.signextend(behavioral)#1
-# Updating msgviewer database...
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# Updating msgviewer database...
+# Loading work.tb_toplevel(behavior)#1
+# ** Warning: (vsim-3473) Component instance "uut : toplevel" is not bound.
+#    Time: 0 ps  Iteration: 0  Region: /tb_toplevel  File: Z:/TDT4255/exercise1/tb_toplevel.vhd
