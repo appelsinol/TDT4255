@@ -85,7 +85,7 @@ architecture Behavioral of processor is
     Port ( 
 			  clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-			  pc_en : in STD_LOGIC;
+		     pc_en : in STD_LOGIC;
 			  pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
            pc_out : out  STD_LOGIC_VECTOR(31 downto 0));
   end component pc;
@@ -94,9 +94,9 @@ architecture Behavioral of processor is
  component ControlUnit is
   
     Port ( opcode : in  STD_LOGIC_VECTOR (5 downto 0);
-			  pc_en : in STD_LOGIC;
 			  clk: STD_LOGIC;
 			  reset:STD_LOGIC;
+			  processor_en : in STD_LOGIC;
            RegDst : out  STD_LOGIC;
 			  ALUSrc : out  STD_LOGIC;
 			  MemtoReg : out  STD_LOGIC;
@@ -105,6 +105,7 @@ architecture Behavioral of processor is
 			  MemWrite : out  STD_LOGIC;
            Branch : out  STD_LOGIC;
            ALUOp : out  STD_LOGIC_VECTOR(1 downto 0);
+			  PCwrite : out STD_LOGIC;
            Jump : out STD_LOGIC);
 	end component ControlUnit;
 
@@ -158,7 +159,7 @@ end component JumpShift;
 	
 -- control signal for the ALU control unit
 	signal ins_31_26 : STD_LOGIC_VECTOR (5 downto 0);
-	
+	signal sig_dmem_write_enable : STD_LOGIC;
 
 -- address for the I type instructions
 	signal ins_15_0_add : STD_LOGIC_VECTOR(15 downto 0);
@@ -175,10 +176,10 @@ end component JumpShift;
 	signal memtoReg_signal : STD_LOGIC;
 	signal regWrite_signal : STD_LOGIC;
 	signal memRead_signal : STD_LOGIC;
-	signal memWrite_signal : STD_LOGIC;
 	signal branch_signal : STD_LOGIC;
 	signal aLUOp_signal : STD_LOGIC_VECTOR(1 downto 0);
 	signal jump_signal : STD_LOGIC;
+	signal PCwrite_signal: STD_LOGIC;
 
 -- signal for ALUcontrol	
 	signal ALUopcode : ALU_INPUT;
@@ -202,7 +203,7 @@ end component JumpShift;
 -- control signal for the R type instructions
 	signal ins_25_21_rs : STD_LOGIC_VECTOR(4 downto 0);
 	signal ins_20_16_rt : STD_LOGIC_VECTOR(4 downto 0);
-	signal ins_15_11_rd : STD_LOGIC_VECTOR(4 downto 0);
+
 
 
 -- signal pc part
@@ -213,16 +214,14 @@ end component JumpShift;
 	signal immediate_address : STD_LOGIC_VECTOR(25 downto 0);
 	signal jumped_instr : STD_LOGIC_VECTOR(31 downto 0);
 	signal after_shift_adder_signal: STD_LOGIC_VECTOR(31 downto 0);
-
---signal Universial  Clock
-	signal clk_internal : STD_LOGIC;
-	
+	signal current_state:state_type;
 	
 	
 begin
+
 	register_imp : register_file
 		PORT MAP(
-			CLK => clk_internal ,		
+			CLK => clk,		
 			RESET	=> reset,			
 			RW	=> regWrite_signal,				
 			RS_ADDR => ins_25_21_rs,
@@ -244,13 +243,12 @@ begin
 			pc_4_instruction => pc_incremented,
 			after_jump_instruction => jumped_instr,
 			immediate_ins => immediate_address 
-			
-		);
+			);
 	
 	adder_increment_4 : adder
 		PORT MAP(
 			X => pc_out_internal,
-			Y => "00000000000000000000000000000100",
+			Y => "00000000000000000000000000000001",
 			CIN => '0',
 		--	COUT => '0',
 			R => pc_incremented
@@ -259,16 +257,16 @@ begin
 	adder_branch : adder
 		PORT MAP(
 			X => pc_incremented,
-			Y => after_2_left_shifting,
+			Y => extened_32_address,
 			CIN => '0',
 		--	COUT => '0',
 			R => after_shift_adder_signal
 			);
-	signshiftleft2_imp : SignShiftLeft2
-		PORT MAP(
-			shiftLeftIn => extened_32_address,
-			shiftLeftOut => after_2_left_shifting
-		);
+--	signshiftleft2_imp : SignShiftLeft2
+--		PORT MAP(
+--			shiftLeftIn => extened_32_address,
+--			shiftLeftOut => after_2_left_shifting
+--		);
 		
 	signextened_imp : SignExtend
 		PORT MAP(
@@ -278,11 +276,11 @@ begin
 		
 	controlunit_imp : ControlUnit
 		PORT MAP(
-			  clk => clk_internal,
+			  clk => clk,
 			  reset => reset,
+			  processor_en => processor_enable,
 			  opcode => ins_31_26,
-			  pc_en => pc_en_signal,
-           RegDst => regDst_signal,
+			  RegDst => regDst_signal,
 			  ALUSrc => aLUSrc_signal,
 			  MemtoReg => memtoReg_signal,
 			  RegWrite => regWrite_signal,
@@ -290,6 +288,7 @@ begin
 			  MemWrite => dmem_write_enable,
            Branch => branch_signal,
            ALUOp => aLUOp_signal,
+			  PCwrite => PCwrite_signal,
            Jump => jump_signal
 		);
 	alu_imp : alu
@@ -302,17 +301,15 @@ begin
 		);
 	PCregister : PC
 		PORT MAP(
-			  clk => clk_internal,
+			  clk => clk,
            reset => reset,
 			  pc_en => pc_en_signal,
 			  pc_in => pc_in_result,
-           pc_out =>pc_out_internal
+           pc_out => pc_out_internal
 		);
 	
-	internal_clk : process(processor_enable,clk)
-	begin
-		clk_internal <= processor_enable and clk;
-	end process;
+				
+	pc_en_signal <= PCwrite_signal or branch_and_zero;
 	
 	mux_register : process(imem_data_in,regDst_signal)
 	begin
@@ -360,42 +357,35 @@ begin
 	end process;
 			
 			
-	
 	branch_zero: process(branch_signal,ALUflags)
 	begin
 		branch_and_zero <= branch_signal and ALUflags.ZERO;
 	end process;
 	
-	mapping_instruction_to_bus: process(imem_data_in)
+	mapping_instruction_to_bus: process(imem_data_in,processor_enable)
 	begin
-		ins_31_26 <= imem_data_in(31 downto 26);
-		ins_25_21_rs <= imem_data_in(25 downto 21);
-		ins_20_16_rt <= imem_data_in(20 downto 16);
-		ins_15_0_add <= imem_data_in(15 downto 0);
-		immediate_address <= imem_data_in(25 downto 0);
+	if (processor_enable = '1') then
+	ins_31_26 <= imem_data_in(31 downto 26);
+	ins_25_21_rs <= imem_data_in(25 downto 21);
+	ins_20_16_rt <= imem_data_in(20 downto 16);
+	ins_15_0_add <= imem_data_in(15 downto 0);
+	immediate_address <= imem_data_in(25 downto 0);
+	end if;
+   end process;
+	
+	processor_re: process(processor_enable,read_data_2,signalToMem_alu_result)
+	begin
+		if (processor_enable = '1') then
+				dmem_data_out <= read_data_2;
+				dmem_address <= signalToMem_alu_result;
+				dmem_address_wr <= signalToMem_alu_result;
+			end if;
 	end process;
 	
 	mapping_pc_instruction : process(pc_out_internal)
 	begin
 		imem_address <= pc_out_internal;
 	end process;
-	
-	alu_to_memory : process(read_data_2,signalToMem_alu_result)
-	begin
-		
-			dmem_data_out <= read_data_2;
-
-			dmem_address <= signalToMem_alu_result;
-			dmem_address_wr <= signalToMem_alu_result;
-
-	end process;
-	
-
-		
-			
-	
-			
-			
 	
 end Behavioral;
 

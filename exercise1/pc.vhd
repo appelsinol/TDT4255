@@ -39,18 +39,21 @@ entity pc is
 end pc;
 
 architecture Behavioral of pc is
-signal current_state,next_state:state_type;
+--signal current_state,next_state:state_type;
+--signal pc_temp : STD_LOGIC_VECTOR(31 downto 0);
 
 begin
-    PC_PROCESS : process(clk,reset)
+    PC_PROCESS : process(clk)
     begin 
-            if reset = '1' then
+          if rising_edge(clk) then
+					if reset = '1' then
                 pc_out <= (others =>'0');
-            elsif rising_edge(clk) then
-				  if pc_en = '1' then 
-                pc_out <= pc_in;
-				  end if;
-            end if;
+					else
+						if pc_en = '1' then 
+							PC_OUT <= pc_in;
+						end if;
+					end if;
+				end if;
     end process;
 end Behavioral;
 

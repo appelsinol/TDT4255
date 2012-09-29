@@ -44,7 +44,8 @@ ARCHITECTURE behavior OF tb_pc IS
          clk : IN  std_logic;
          reset : IN  std_logic;
          pc_in : IN  std_logic_vector(31 downto 0);
-         pc_out : OUT  std_logic_vector(31 downto 0)
+         pc_out : OUT  std_logic_vector(31 downto 0);
+			   pc_en	: IN std_logic
         );
     END COMPONENT;
     
@@ -53,6 +54,7 @@ ARCHITECTURE behavior OF tb_pc IS
    signal clk : std_logic := '0';
    signal reset : std_logic := '0';
    signal pc_in : std_logic_vector(31 downto 0) := (others => '0');
+	 signal pc_en : std_logic:='1';
 
  	--Outputs
    signal pc_out : std_logic_vector(31 downto 0);
@@ -67,7 +69,8 @@ BEGIN
           clk => clk,
           reset => reset,
           pc_in => pc_in,
-          pc_out => pc_out
+          pc_out => pc_out,
+			    pc_en => pc_en
         );
 
    -- Clock process definitions
@@ -79,7 +82,7 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
-
+	pc_en<='1';
    -- Stimulus process
    stim_proc: process
    begin		

@@ -1,7 +1,6 @@
 vhdl work "hardware/full_adder.vhd"
 vhdl work "hardware/mips_constant_pkg.vhd"
 vhdl work "hardware/alu_1bit.vhd"
-vhdl work "SignShiftLeft2.vhd"
 vhdl work "SignExtend.vhd"
 vhdl work "pc.vhd"
 vhdl work "JumpShift.vhd"

@@ -49,7 +49,7 @@ alu_control: process (instr_15_0,ALUop)
 	constant oSUB : STD_LOGIC_VECTOR(5 downto 0) := "100010";
 	constant oAND : STD_LOGIC_VECTOR(5 downto 0) := "100100";
 	constant oOR : STD_LOGIC_VECTOR(5 downto 0) := "100101";
-	constant oSLT : STD_LOGIC_VECTOR(5 downto 0) := "1001010";
+	constant oSLT : STD_LOGIC_VECTOR(5 downto 0) := "101010";
 	
 	begin
 		case ALUop is 
@@ -69,6 +69,8 @@ alu_control: process (instr_15_0,ALUop)
 						alu_temp <= "0001"; -- or
 					when oSLT =>
 						alu_temp <= "0111"; -- slt
+					when others =>
+					  alu_temp <= "0000"; 
 				end case;
 			when others =>
 				alu_temp <= "0000";

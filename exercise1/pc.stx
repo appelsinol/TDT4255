@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: pc.prj
 
@@ -39,6 +39,8 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "\TDT4255\exercise1\hardware/mips_constant_pkg.vhd" into library work
+Parsing package <MIPS_CONSTANT_PKG>.
 Parsing VHDL file "\TDT4255\exercise1\pc.vhd" into library work
 Parsing entity <pc>.
 Parsing architecture <Behavioral> of entity <pc>.
@@ -49,7 +51,7 @@ Total CPU time to Xst completion: 3.21 secs
  
 --> 
 
-Total memory usage is 184592 kilobytes
+Total memory usage is 184648 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

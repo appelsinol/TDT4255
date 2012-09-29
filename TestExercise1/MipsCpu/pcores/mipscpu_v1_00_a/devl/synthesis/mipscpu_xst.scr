@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "\\sambaad.stud.ntnu.no\lichao\TDT4255\TestExercise1\MipsCpu\pcores\mipscpu_v1_00_a\devl\synthesis\mipscpu_xst.prj"
+-top mipscpu
+-p virtex5
+-ofn "\\sambaad.stud.ntnu.no\lichao\TDT4255\TestExercise1\MipsCpu\pcores\mipscpu_v1_00_a\devl\synthesis\mipscpu_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib mipscpu_v1_00_a

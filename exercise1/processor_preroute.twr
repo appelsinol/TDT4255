@@ -1,0 +1,297 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml processor_preroute.twx processor_map.ncd -o
+processor_preroute.twr processor.pcf
+
+Design file:              processor_map.ncd
+Physical constraint file: processor.pcf
+Device,package,speed:     xc6slx16,csg324,C,-2 (PRODUCTION 1.15 2010-12-02)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+----------------+------------+------------+------------+------------+------------------+--------+
+                |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+----------------+------------+------------+------------+------------+------------------+--------+
+dmem_data_in<0> |    4.283(R)|      SLOW  |   -2.239(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<1> |    3.951(R)|      SLOW  |   -2.132(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<2> |    5.281(R)|      SLOW  |   -3.387(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<3> |    4.354(R)|      SLOW  |   -2.715(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<4> |    4.867(R)|      SLOW  |   -3.400(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<5> |    4.357(R)|      SLOW  |   -2.550(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<6> |    5.038(R)|      SLOW  |   -3.293(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<7> |    4.267(R)|      SLOW  |   -2.672(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<8> |    4.430(R)|      SLOW  |   -2.752(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<9> |    4.111(R)|      SLOW  |   -1.776(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<10>|    4.945(R)|      SLOW  |   -3.374(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<11>|    4.345(R)|      SLOW  |   -2.728(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<12>|    5.149(R)|      SLOW  |   -3.719(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<13>|    4.712(R)|      SLOW  |   -3.083(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<14>|    5.303(R)|      SLOW  |   -3.839(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<15>|    4.584(R)|      SLOW  |   -3.174(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<16>|    4.156(R)|      SLOW  |   -2.440(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<17>|    3.813(R)|      SLOW  |   -1.989(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<18>|    3.919(R)|      SLOW  |   -2.301(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<19>|    3.345(R)|      SLOW  |   -1.701(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<20>|    6.078(R)|      SLOW  |   -4.238(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<21>|    3.133(R)|      SLOW  |   -1.256(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<22>|    2.764(R)|      SLOW  |   -1.041(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<23>|    3.054(R)|      SLOW  |   -1.487(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<24>|    2.369(R)|      SLOW  |   -1.002(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<25>|    2.566(R)|      SLOW  |   -1.187(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<26>|    2.614(R)|      SLOW  |   -0.873(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<27>|    2.941(R)|      SLOW  |   -1.645(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<28>|    4.036(R)|      SLOW  |   -2.295(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<29>|    4.038(R)|      SLOW  |   -2.495(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<30>|    4.357(R)|      SLOW  |   -2.790(R)|      SLOW  |clk_BUFGP         |   0.000|
+dmem_data_in<31>|    4.017(R)|      SLOW  |   -2.301(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<11>|   10.015(R)|      SLOW  |   -4.989(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<12>|    9.573(R)|      SLOW  |   -5.059(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<13>|   10.090(R)|      SLOW  |   -5.739(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<14>|    9.848(R)|      SLOW  |   -5.156(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<15>|    9.426(R)|      SLOW  |   -4.795(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<16>|   10.135(R)|      SLOW  |   -5.109(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<17>|    9.559(R)|      SLOW  |   -5.045(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<18>|   10.160(R)|      SLOW  |   -5.809(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<19>|    9.712(R)|      SLOW  |   -5.020(R)|      SLOW  |clk_BUFGP         |   0.000|
+imem_data_in<20>|    9.568(R)|      SLOW  |   -4.937(R)|      SLOW  |clk_BUFGP         |   0.000|
+reset           |    4.225(R)|      SLOW  |   -0.416(R)|      SLOW  |clk_BUFGP         |   0.000|
+----------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock processor_enable
+----------------+------------+------------+------------+------------+--------------------------+--------+
+                |Max Setup to|  Process   |Max Hold to |  Process   |                          | Clock  |
+Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)         | Phase  |
+----------------+------------+------------+------------+------------+--------------------------+--------+
+imem_data_in<0> |    3.506(F)|      SLOW  |   -3.060(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<1> |    3.315(F)|      SLOW  |   -2.869(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<2> |    3.411(F)|      SLOW  |   -2.965(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<3> |    3.411(F)|      SLOW  |   -2.965(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<4> |    3.208(F)|      SLOW  |   -2.806(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<5> |    3.414(F)|      SLOW  |   -3.012(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<6> |    2.929(F)|      SLOW  |   -2.483(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<7> |    3.123(F)|      SLOW  |   -2.677(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<8> |    2.908(F)|      SLOW  |   -2.455(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<9> |    3.118(F)|      SLOW  |   -2.665(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<10>|    3.088(F)|      SLOW  |   -2.635(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<11>|    3.084(F)|      SLOW  |   -2.631(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<12>|    3.771(F)|      SLOW  |   -3.318(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<13>|    4.031(F)|      SLOW  |   -3.578(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<14>|    3.871(F)|      SLOW  |   -3.418(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<15>|    3.320(F)|      SLOW  |   -2.867(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<16>|    3.904(F)|      SLOW  |   -2.754(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<17>|    3.859(F)|      SLOW  |   -2.965(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<18>|    3.856(F)|      SLOW  |   -3.410(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<19>|    3.660(F)|      SLOW  |   -3.214(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<20>|    3.637(F)|      SLOW  |   -3.235(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<21>|    4.141(F)|      SLOW  |   -3.264(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<22>|    4.288(F)|      SLOW  |   -2.699(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<23>|    3.954(F)|      SLOW  |   -3.552(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<24>|    3.972(F)|      SLOW  |   -3.570(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<25>|    4.174(F)|      SLOW  |   -3.772(F)|      SLOW  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<26>|   -0.585(F)|      SLOW  |    1.536(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<27>|   -0.574(F)|      SLOW  |    1.525(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<28>|   -0.717(F)|      SLOW  |    1.668(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<29>|   -0.717(F)|      SLOW  |    1.668(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<30>|   -0.717(F)|      SLOW  |    1.668(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+imem_data_in<31>|   -0.717(F)|      SLOW  |    1.668(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+----------------+------------+------------+------------+------------+--------------------------+--------+
+
+Clock clk to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+imem_address<0> |        11.591(R)|      SLOW  |         9.071(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<1> |        11.649(R)|      SLOW  |         9.129(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<2> |        11.565(R)|      SLOW  |         8.996(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<3> |        11.435(R)|      SLOW  |         8.915(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<4> |        10.989(R)|      SLOW  |         8.420(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<5> |        11.295(R)|      SLOW  |         8.726(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<6> |        11.228(R)|      SLOW  |         8.708(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<7> |        11.386(R)|      SLOW  |         8.866(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<8> |        11.100(R)|      SLOW  |         8.577(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<9> |        11.049(R)|      SLOW  |         8.480(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<10>|        10.964(R)|      SLOW  |         8.444(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<11>|        11.045(R)|      SLOW  |         8.476(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<12>|        10.587(R)|      SLOW  |         8.018(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<13>|        10.396(R)|      SLOW  |         7.827(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<14>|        10.399(R)|      SLOW  |         7.830(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<15>|        10.354(R)|      SLOW  |         7.785(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<16>|        10.189(R)|      SLOW  |         7.669(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<17>|        10.189(R)|      SLOW  |         7.669(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<18>|        10.000(R)|      SLOW  |         7.477(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<19>|        10.214(R)|      SLOW  |         7.694(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<20>|         9.999(R)|      SLOW  |         7.476(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<21>|         9.774(R)|      SLOW  |         7.251(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<22>|         9.977(R)|      SLOW  |         7.454(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<23>|        10.006(R)|      SLOW  |         7.483(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<24>|         9.434(R)|      SLOW  |         6.914(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<25>|         9.663(R)|      SLOW  |         7.143(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<26>|         9.737(R)|      SLOW  |         7.168(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<27>|         9.256(R)|      SLOW  |         6.687(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<28>|         9.525(R)|      SLOW  |         6.956(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<29>|         9.574(R)|      SLOW  |         7.054(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<30>|         8.979(R)|      SLOW  |         6.410(R)|      FAST  |clk_BUFGP         |   0.000|
+imem_address<31>|         8.782(R)|      SLOW  |         6.262(R)|      FAST  |clk_BUFGP         |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock processor_enable to Pad
+-------------------+-----------------+------------+-----------------+------------+--------------------------+--------+
+                   |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                          | Clock  |
+Destination        |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)         | Phase  |
+-------------------+-----------------+------------+-----------------+------------+--------------------------+--------+
+dmem_address<0>    |         9.573(F)|      SLOW  |         6.986(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<1>    |        10.774(F)|      SLOW  |         8.133(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<2>    |        10.131(F)|      SLOW  |         7.490(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<3>    |        10.271(F)|      SLOW  |         7.630(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<4>    |        10.104(F)|      SLOW  |         7.517(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<5>    |         9.878(F)|      SLOW  |         7.291(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<6>    |        10.237(F)|      SLOW  |         7.650(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<7>    |        10.155(F)|      SLOW  |         7.568(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<8>    |        10.465(F)|      SLOW  |         7.878(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<9>    |        10.439(F)|      SLOW  |         7.852(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<10>   |        10.688(F)|      SLOW  |         8.101(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<11>   |        11.316(F)|      SLOW  |         8.729(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<12>   |        11.107(F)|      SLOW  |         8.466(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<13>   |        11.142(F)|      SLOW  |         8.501(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<14>   |        11.286(F)|      SLOW  |         8.699(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<15>   |        11.300(F)|      SLOW  |         8.713(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<16>   |        10.731(F)|      SLOW  |         8.144(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<17>   |        11.035(F)|      SLOW  |         8.448(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<18>   |        10.737(F)|      SLOW  |         8.150(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<19>   |        10.490(F)|      SLOW  |         7.903(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<20>   |        10.741(F)|      SLOW  |         8.154(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<21>   |        10.985(F)|      SLOW  |         8.403(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<22>   |        10.754(F)|      SLOW  |         8.172(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<23>   |        10.510(F)|      SLOW  |         7.923(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<24>   |        10.493(F)|      SLOW  |         7.906(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<25>   |        10.709(F)|      SLOW  |         8.122(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<26>   |        10.709(F)|      SLOW  |         8.122(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<27>   |        10.132(F)|      SLOW  |         7.491(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<28>   |        10.223(F)|      SLOW  |         7.582(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<29>   |         9.879(F)|      SLOW  |         7.292(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<30>   |         9.914(F)|      SLOW  |         7.327(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address<31>   |        10.591(F)|      SLOW  |         8.009(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<0> |        11.731(F)|      SLOW  |         9.144(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<1> |        11.759(F)|      SLOW  |         9.118(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<2> |        11.699(F)|      SLOW  |         9.058(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<3> |        11.359(F)|      SLOW  |         8.718(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<4> |        11.616(F)|      SLOW  |         9.029(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<5> |        11.624(F)|      SLOW  |         9.037(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<6> |        10.674(F)|      SLOW  |         8.087(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<7> |        10.620(F)|      SLOW  |         8.033(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<8> |        10.926(F)|      SLOW  |         8.339(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<9> |        10.863(F)|      SLOW  |         8.276(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<10>|        10.638(F)|      SLOW  |         8.051(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<11>|        10.178(F)|      SLOW  |         7.591(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<12>|        10.989(F)|      SLOW  |         8.348(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<13>|        10.978(F)|      SLOW  |         8.337(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<14>|        10.166(F)|      SLOW  |         7.579(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<15>|        10.615(F)|      SLOW  |         8.028(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<16>|        10.126(F)|      SLOW  |         7.539(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<17>|        10.126(F)|      SLOW  |         7.539(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<18>|         9.774(F)|      SLOW  |         7.187(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<19>|        10.290(F)|      SLOW  |         7.703(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<20>|         9.775(F)|      SLOW  |         7.188(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<21>|        10.051(F)|      SLOW  |         7.469(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<22>|         9.808(F)|      SLOW  |         7.226(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<23>|        10.053(F)|      SLOW  |         7.466(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<24>|        10.053(F)|      SLOW  |         7.466(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<25>|         9.663(F)|      SLOW  |         7.076(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<26>|         9.742(F)|      SLOW  |         7.155(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<27>|        10.413(F)|      SLOW  |         7.772(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<28>|        10.942(F)|      SLOW  |         8.301(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<29>|        10.347(F)|      SLOW  |         7.760(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<30>|        11.295(F)|      SLOW  |         8.708(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_address_wr<31>|        11.386(F)|      SLOW  |         8.804(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<0>   |        13.582(F)|      SLOW  |        10.995(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<1>   |        13.747(F)|      SLOW  |        11.160(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<2>   |        13.521(F)|      SLOW  |        10.934(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<3>   |        12.410(F)|      SLOW  |         9.828(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<4>   |        12.206(F)|      SLOW  |         9.624(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<5>   |        12.206(F)|      SLOW  |         9.624(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<6>   |        12.206(F)|      SLOW  |         9.624(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<7>   |        12.464(F)|      SLOW  |         9.877(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<8>   |        12.076(F)|      SLOW  |         9.489(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<9>   |        11.976(F)|      SLOW  |         9.389(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<10>  |        12.076(F)|      SLOW  |         9.489(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<11>  |        11.375(F)|      SLOW  |         8.788(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<12>  |        11.551(F)|      SLOW  |         8.964(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<13>  |        11.325(F)|      SLOW  |         8.738(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<14>  |        11.328(F)|      SLOW  |         8.741(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<15>  |        11.400(F)|      SLOW  |         8.818(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<16>  |        11.268(F)|      SLOW  |         8.686(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<17>  |        11.042(F)|      SLOW  |         8.460(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<18>  |        11.248(F)|      SLOW  |         8.666(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<19>  |        11.386(F)|      SLOW  |         8.745(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<20>  |        11.383(F)|      SLOW  |         8.742(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<21>  |        11.361(F)|      SLOW  |         8.720(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<22>  |        11.481(F)|      SLOW  |         8.840(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<23>  |        11.265(F)|      SLOW  |         8.678(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<24>  |        11.265(F)|      SLOW  |         8.678(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<25>  |        11.039(F)|      SLOW  |         8.452(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<26>  |        11.309(F)|      SLOW  |         8.722(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<27>  |        11.408(F)|      SLOW  |         8.767(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<28>  |        11.678(F)|      SLOW  |         9.037(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<29>  |        11.758(F)|      SLOW  |         9.117(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<30>  |        11.361(F)|      SLOW  |         8.720(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+dmem_data_out<31>  |        11.141(F)|      SLOW  |         8.500(F)|      FAST  |processor_enable_IBUF_BUFG|   0.000|
+-------------------+-----------------+------------+-----------------+------------+--------------------------+--------+
+
+Clock to Setup on destination clock clk
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk             |   25.905|         |         |         |
+processor_enable|    2.636|   26.659|         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock processor_enable
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk             |         |         |   22.900|         |
+processor_enable|         |         |    0.601|   23.360|
+----------------+---------+---------+---------+---------+
+
+
+Analysis completed Sat Sep 29 20:26:59 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 241 MB
+
+
+

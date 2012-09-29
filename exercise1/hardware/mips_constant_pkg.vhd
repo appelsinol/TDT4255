@@ -49,6 +49,6 @@ package MIPS_CONSTANT_PKG is
 	end record;
 	
 	-- PROCESSOR STATE
-	type state_type is (EXEC, STALL);
+	type state_type is (fetch, EXEC, STALL);
 	
 end MIPS_CONSTANT_PKG;

@@ -42,7 +42,6 @@ architecture Behavioral of JumpShift is
 begin
 	jump_shift:process(pc_4_instruction,immediate_ins)
 	begin
-		after_jump_instruction <= pc_4_instruction(31 downto 28) & immediate_ins & "00";
+		after_jump_instruction <= pc_4_instruction(31 downto 26) & immediate_ins;
 	end process;
 end Behavioral;
-

@@ -1,0 +1,10 @@
+-batch 
+-create mipscpu 
+-ver 1.00.a 
+-dir "Y:\TDT4255\TestExercise1\MipsCpu" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 5 
+-xps 
+-ise 
+-driver 
