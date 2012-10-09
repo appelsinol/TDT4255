@@ -107,7 +107,9 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="register_file.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="register_file.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_SignExtend.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_cpu.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_everythingelse.fdo"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_mips.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_pc.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_processor.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="tb_toplevel.fdo"/>
@@ -135,9 +137,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1348946290" xil_pn:in_ck="1459929058457255762" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1348946290">
+    <transform xil_pn:end_ts="1348948235" xil_pn:in_ck="-5696853895213967880" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1348948234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALUControl.vhd"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
       <outfile xil_pn:name="JumpShift.vhd"/>
@@ -156,14 +162,15 @@
       <outfile xil_pn:name="pc.vhd"/>
       <outfile xil_pn:name="processor.vhd"/>
       <outfile xil_pn:name="tb_SignExtend.vhd"/>
+      <outfile xil_pn:name="tb_cpu.vhd"/>
+      <outfile xil_pn:name="tb_mips.vhd"/>
       <outfile xil_pn:name="tb_pc.vhd"/>
-      <outfile xil_pn:name="tb_processor.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1348946563" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3597591125478451641" xil_pn:start_ts="1348946563">
+    <transform xil_pn:end_ts="1348948269" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8062202704481476740" xil_pn:start_ts="1348948269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1348946563" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1685978710611505097" xil_pn:start_ts="1348946563">
+    <transform xil_pn:end_ts="1348948269" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-494502603562566398" xil_pn:start_ts="1348948269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -171,9 +178,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1348946290" xil_pn:in_ck="1459929058457255762" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1348946290">
+    <transform xil_pn:end_ts="1348948235" xil_pn:in_ck="-5696853895213967880" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1348948235">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALUControl.vhd"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
       <outfile xil_pn:name="JumpShift.vhd"/>
@@ -192,13 +204,19 @@
       <outfile xil_pn:name="pc.vhd"/>
       <outfile xil_pn:name="processor.vhd"/>
       <outfile xil_pn:name="tb_SignExtend.vhd"/>
+      <outfile xil_pn:name="tb_cpu.vhd"/>
+      <outfile xil_pn:name="tb_mips.vhd"/>
       <outfile xil_pn:name="tb_pc.vhd"/>
-      <outfile xil_pn:name="tb_processor.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1348946564" xil_pn:in_ck="1459929058457255762" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="889151390353550919" xil_pn:start_ts="1348946563">
+    <transform xil_pn:end_ts="1348948270" xil_pn:in_ck="-5696853895213967880" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="889151390353550919" xil_pn:start_ts="1348948269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="tb_everythingelse.fdo"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="tb_mips.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
     </transform>
@@ -234,7 +252,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="processor.lso"/>
@@ -255,6 +275,7 @@
     <transform xil_pn:end_ts="1348942699" xil_pn:in_ck="8272732185915004934" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3194580837581022598" xil_pn:start_ts="1348942694">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="processor.bld"/>
@@ -265,6 +286,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -280,6 +302,7 @@
     <transform xil_pn:end_ts="1348942918" xil_pn:in_ck="-1775227461118258528" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1348942857">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="processor.ncd"/>
       <outfile xil_pn:name="processor.pad"/>
@@ -295,6 +318,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="processor.bgn"/>
       <outfile xil_pn:name="processor.bit"/>
@@ -307,6 +331,7 @@
     <transform xil_pn:end_ts="1348942918" xil_pn:in_ck="8272732185915004803" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1348942903">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
@@ -316,6 +341,7 @@
     <transform xil_pn:end_ts="1348943220" xil_pn:in_ck="-1775227461118258528" xil_pn:name="TRAN_preRouteTrce" xil_pn:prop_ck="722859607460791352" xil_pn:start_ts="1348943206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="processor_preroute.twr"/>
       <outfile xil_pn:name="processor_preroute.twx"/>

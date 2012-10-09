@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "\\sambaad.stud.ntnu.no\lichao\TDT4255\TestExercise1\processor\pcores\processor_v1_00_a\devl\synthesis\processor_xst.prj"
+-top processor
+-p virtex5
+-ofn "\\sambaad.stud.ntnu.no\lichao\TDT4255\TestExercise1\processor\pcores\processor_v1_00_a\devl\synthesis\processor_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib processor_v1_00_a

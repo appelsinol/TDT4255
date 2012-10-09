@@ -159,7 +159,7 @@ end component JumpShift;
 	
 -- control signal for the ALU control unit
 	signal ins_31_26 : STD_LOGIC_VECTOR (5 downto 0);
-	signal sig_dmem_write_enable : STD_LOGIC;
+--	signal sig_dmem_write_enable : STD_LOGIC;
 
 -- address for the I type instructions
 	signal ins_15_0_add : STD_LOGIC_VECTOR(15 downto 0);
@@ -168,7 +168,7 @@ end component JumpShift;
 	signal extened_32_address : STD_LOGIC_VECTOR(31 downto 0);
 
 -- signal after left shifting
-	signal after_2_left_shifting : STD_LOGIC_VECTOR(31 downto 0);
+--	signal after_2_left_shifting : STD_LOGIC_VECTOR(31 downto 0);
 
 -- control signal for Control Unit
 	signal regDst_signal : STD_LOGIC;
