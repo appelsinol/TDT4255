@@ -54,7 +54,7 @@ ARCHITECTURE behavior OF tb_toplevel IS
 
    --Inputs
    signal clk : std_logic := '0';
-   signal reset : std_logic := '0';
+   signal reset : std_logic := '1';
    signal command : std_logic_vector(0 to 31) := (others => '0');
    signal bus_address_in : std_logic_vector(0 to 31) := (others => '0');
    signal bus_data_in : std_logic_vector(0 to 31) := (others => '0');
@@ -83,7 +83,7 @@ ARCHITECTURE behavior OF tb_toplevel IS
 	constant data2 : std_logic_vector(0 to 31):= "00000000000000000000000000000010";
 	
 	constant IDLE : std_logic_vector(0 to 31)		:= "00000000000000000000000000100010";		--	Do Nothing		00 00 00 22
-	constant LOAD_1 : std_logic_vector(0 to 31)	:= "10001100000000010000000000000001";		-- LW 	$1 $0(1)		8C $4 $0(1)
+	constant LOAD_1 : std_logic_vector(0 to 31)	:= "10001100000000010000000000000001";		-- LW 	$1 $0(1)		8C $1 $0(1)
 	constant LOAD_2 : std_logic_vector(0 to 31)	:= "10001100000000100000000000000010";		-- LW 	$2 $0(2)		8C $4 $0(1)
 	constant LDI_1 : std_logic_vector(0 to 31)	:= "00111100000000010000000000000110";		-- LDI 	$1 06		3C 01 00 06
    constant LDI_2 : std_logic_vector(0 to 31)	:= "00111100000000100000000000001000";		-- LDI 	$2 08		3C 02 00 08	
@@ -127,8 +127,14 @@ BEGIN
    begin		
 	
       -- hold reset state for 100 ns.
-      wait for 20 ns;	
-
+--      wait for 20 ns;	
+--		reset	<= '1';
+--		wait for 20 ns;	
+		reset	<= '0';
+		wait for 20 ns;	
+		reset	<= '1';
+		wait for 20 ns;	
+		reset	<= '0';
       -- insert stimulus here 
 		
 		-- INSTR: WRITE DATA TO DMEM
