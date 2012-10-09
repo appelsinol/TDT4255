@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-10-09T18:42:59</DateModified>
+  <DateModified>2012-10-09T20:45:24</DateModified>
   <ModuleName>tb_cpu</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>//sambaad.stud.ntnu.no/lichao/TDT4255/exercise2/iseconfig/tb_cpu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/TDT4255/exercise2</ImplementationReportsDirectory>
+  <SavedFilePath>//sambaad.stud.ntnu.no/ahmedha/ex/TDT4255/exercise2/iseconfig/tb_cpu.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>M:/ex/TDT4255/exercise2\</ImplementationReportsDirectory>
   <DateInitialized>2012-10-09T18:42:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

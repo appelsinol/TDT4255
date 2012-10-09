@@ -8,52 +8,16 @@
 <!-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/ALUControl.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;M:/ex/TDT4255/exercise2/ex_mem.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/ControlUnit.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;M:/ex/TDT4255/exercise2/id_ex.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/JumpShift.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;M:/ex/TDT4255/exercise2/if_id.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/SignExtend.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/adder.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/alu.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/alu_1bit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/com.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/full_adder.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/memory.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/mips_constant_pkg.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/pc.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/processor.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/register_file.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/tb_cpu.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/TDT4255/exercise2/toplevel.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;M:/ex/TDT4255/exercise2/mem_wb.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
