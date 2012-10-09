@@ -19,6 +19,9 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library WORK;
+use WORK.MIPS_CONSTANT_PKG.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,6 +35,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity id_ex is
 	PORT(
 	   CLK : in STD_LOGIC;
+		reset : in STD_LOGIC;
 		processor_en : in STD_LOGIC;
 		incremented_addr_in : in STD_LOGIC_VECTOR(31 downto 0);
 		read_data_1_in : in STD_LOGIC_VECTOR(31 downto 0);
@@ -73,8 +77,22 @@ architecture Behavioral of id_ex is
 begin
 		pipe_process : process(clk)
 		begin
+		if (reset = '1') then 
+		   incremented_addr_out <= ZERO32b;
+		   read_data_1_out <= ZERO32b;
+		   read_data_2_out <= ZERO32b;
+			sign_extend_out <= ZERO32b;
+			instruction_20_16_out <= "00000";
+			instruction_15_11_out <= "00000";
+			RegDst_out <= '0';
+			ALUSrc_out <= '0';
+			MemtoReg_out <= '0';
+			RegWrite_out <= '0';
+			MemRead_out <= '0';
+			Branch_out <= '0';
+			ALUOp_out <= "00";
 		
-		if (rising_edge(clk)) then
+		elsif (rising_edge(clk)) then
 			if(processor_en = '1') then
 				incremented_addr_out <= incremented_addr_in; 	
 				read_data_1_out <= read_data_1_in;

@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library WORK;
+use WORK.MIPS_CONSTANT_PKG.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ex_mem is
-			PORT (CLK : in STD_LOGIC;
+		PORT (CLK : in STD_LOGIC;
+				reset : in STD_LOGIC;	
 			  processor_en : in STD_LOGIC;
 			  -- Write back control lines
 			  RegWrite_in : in  STD_LOGIC;
@@ -63,7 +66,18 @@ architecture Behavioral of ex_mem is
 begin
 		ex_mem_pipeline : process(clk)
 		begin
-		if rising_edge(clk)then
+		if (reset = '1') then
+			 RegWrite_out <= '0';
+			 MemtoReg_out <= '0';
+			 Branch_out <= '0';
+			 MemRead_out <= '0';
+			 MemWrite_out <=  '0';
+			 add_result_out <= ZERO32b;
+			 alu_result_out <= ZERO32b;
+			 FLAGS_out <= FLAGS_in;
+			 read_data_2_out <= ZERO32b;
+			 mux_out <= mux_in;
+		elsif rising_edge(clk)then
 			if(processor_en = '1') then
 			 RegWrite_out <= RegWrite_in;
 			 MemtoReg_out <= MemtoReg_in;
@@ -71,6 +85,7 @@ begin
 			 MemRead_out <= MemRead_in;
 			 MemWrite_out <=  MemWrite_in;
 			 add_result_out <= add_result_in;
+			 alu_result_out <= alu_result_in;
 			 FLAGS_out <= FLAGS_in;
 			 read_data_2_out <= read_data_2_in;
 			 mux_out <= mux_in;

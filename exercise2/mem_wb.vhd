@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library WORK;
+use WORK.MIPS_CONSTANT_PKG.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,6 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity mem_wb is
 PORT(
 	   CLK : in STD_LOGIC;
+		reset : in STD_LOGIC;
 		processor_en : in STD_LOGIC;
 		data_memory_in : in STD_LOGIC_VECTOR(31 downto 0);
 		address_in : in STD_LOGIC_VECTOR(31 downto 0);
@@ -52,8 +55,14 @@ begin
  
 pipe_process : process(clk)
 		begin
+		if (reset = '1') then
+			data_memory_out <= ZERO32b;
+			address_out <= ZERO32b;
+			register_no_out <= "00000";
+			MemtoReg_out <= '0';
+			RegWrite_out <= '0';
 		
-		if (rising_edge(clk)) then
+		elsif (rising_edge(clk)) then
 			if(processor_en = '1') then
 				data_memory_out <= data_memory_in;
 				address_out <= address_in;
