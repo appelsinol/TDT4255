@@ -85,7 +85,7 @@ architecture Behavioral of processor is
     Port ( 
 			  clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
---		     pc_en : in STD_LOGIC;
+		     pc_en : in STD_LOGIC;
 			  pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
            pc_out : out  STD_LOGIC_VECTOR(31 downto 0));
   end component pc;
@@ -365,7 +365,7 @@ begin
 			RW	=> wb_RegWrite_out_result,				
 			RS_ADDR => ins_25_21_rs,
 			RT_ADDR => ins_20_16_rt,
-			RD_ADDR => write_register,
+			RD_ADDR => register_no_wb,
 			WRITE_DATA => memory_to_register,
 			RS	=> read_data_1,
 			RT	=> read_data_2
@@ -432,7 +432,7 @@ begin
 		PORT MAP(
 			  clk => clk,
            reset => reset,
---			  pc_en => pc_en_signal,
+			  pc_en => processor_enable,
 			  pc_in => pc_in_result,
            pc_out => pc_out_internal
 		);
@@ -553,12 +553,12 @@ PORT MAP(
 		end if;
 	end process;
 	
-	mux_memToReg : process(dmem_data_in,alu_result_out_mem, wb_MemtoReg_out_result)
+	mux_memToReg : process(dmem_data_in,alu_to_register, wb_MemtoReg_out_result)
 	begin
 		if wb_MemtoReg_out_result = '1' then
 			memory_to_register <= dmem_data_in;
 		else
-			memory_to_register <= alu_result_out_mem;
+			memory_to_register <= alu_to_register;
 		end if;
 	end process;
 		
@@ -583,9 +583,9 @@ PORT MAP(
 	mux_branch : process(p_add_result,PCSrc,pc_incremented)
 	begin
 		if PCSrc = '1' then
-			pc_in_result <= pc_incremented;
+		    pc_in_result <= p_add_result;
 		else 
-			pc_in_result <= p_add_result;
+          pc_in_result <= pc_incremented;
 		end if;
 	end process;
 			

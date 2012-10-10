@@ -4,9 +4,9 @@ K3
 cModel Technology
 Z0 dZ:\TDT4255\exercise2
 T_opt
-VWA?k]N0<gTamWP6IWIPZz3
+VBmcZIhedafmNb9Scl:A?@3
 Z1 04 6 8 work tb_cpu behavior 1
-Z2 =1-00215a5a6f07-5075b754-16-d80
+Z2 =1-00215a5a6f07-5075d580-346-2a0
 Z3 o-quiet -auto_acc_if_foreign -work work +acc
 Z4 n@_opt
 Z5 OE;O;6.6d;45
@@ -378,7 +378,7 @@ R14
 R15
 Z116 !s100 8D><<OTIBGneG4W8[YbLk0
 Epc
-Z117 w1349892069
+Z117 w1349899133
 R22
 R8
 R9
@@ -387,20 +387,20 @@ Z118 8pc.vhd
 Z119 Fpc.vhd
 l0
 L30
-Z120 Vk@?X`4[7M_en^TzM@1POm0
+Z120 VUh6@6;XaClTS__l>D^g_^0
 R13
 31
 R14
 R15
-Z121 !s100 >00AdA3T0]jjL^;6Q1ANK2
+Z121 !s100 RU8FoGAALBa;MzK>1Tc340
 Abehavioral
 R22
 R8
 R9
-Z122 DEx4 work 2 pc 0 22 k@?X`4[7M_en^TzM@1POm0
+Z122 DEx4 work 2 pc 0 22 Uh6@6;XaClTS__l>D^g_^0
 l45
 L41
-Z123 VGNUOO:47TkQH>9c<I[0fU1
+Z123 V0dNSdJGaj@DcY0[@noIEb3
 R13
 31
 R29
@@ -408,9 +408,9 @@ R30
 R31
 R14
 R15
-Z124 !s100 UO;N7cVSXAFUOO>0AhXZj2
+Z124 !s100 FNC4WXYeVcQl6:76?W;9O1
 Eprocessor
-Z125 w1349892089
+Z125 w1349899751
 R22
 R48
 R49
@@ -434,7 +434,7 @@ R9
 Z130 DEx4 work 9 processor 0 22 ;FiBkEP>fS1miNbnB<LI`3
 l359
 L54
-Z131 V11kHTEWUS^5MgKbI5cC_o2
+Z131 VohAWdTV9YOJLY3T3@^`ZF0
 R13
 31
 Z132 Mx4 4 ieee 14 std_logic_1164
@@ -443,7 +443,7 @@ Z134 Mx2 4 ieee 15 std_logic_arith
 R31
 R14
 R15
-Z135 !s100 iLzh[j33ZzOi@RMB4kV>i1
+Z135 !s100 j=;a5OE[oWB5d=e9d0^PG3
 Eregister_file
 R7
 R22
@@ -506,7 +506,7 @@ R14
 R15
 Z149 !s100 j0CF6cQFIiKYK4mLYkbk21
 Etb_cpu
-Z150 w1349889840
+Z150 w1349893038
 R9
 R6
 Z151 8tb_cpu.vhd
