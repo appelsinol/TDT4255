@@ -42,10 +42,10 @@ PORT(
 		data_memory_out : out STD_LOGIC_VECTOR(31 downto 0);
 		address_out : out STD_LOGIC_VECTOR(31 downto 0);
 		register_no_out : out STD_LOGIC_VECTOR(4 downto 0);
-		MemtoReg_in : in  STD_LOGIC;
-		RegWrite_in : in  STD_LOGIC;
-		MemtoReg_out : out  STD_LOGIC;
-		RegWrite_out : out  STD_LOGIC
+		wb_MemtoReg_in : in  STD_LOGIC;
+		wb_RegWrite_in : in  STD_LOGIC;
+		wb_MemtoReg_out : out  STD_LOGIC;
+		wb_RegWrite_out : out  STD_LOGIC
 	);
 end mem_wb;
 
@@ -59,16 +59,16 @@ pipe_process : process(clk)
 			data_memory_out <= ZERO32b;
 			address_out <= ZERO32b;
 			register_no_out <= "00000";
-			MemtoReg_out <= '0';
-			RegWrite_out <= '0';
+			wb_MemtoReg_out <= '0';
+			wb_RegWrite_out <= '0';
 		
 		elsif (rising_edge(clk)) then
 			if(processor_en = '1') then
 				data_memory_out <= data_memory_in;
 				address_out <= address_in;
 				register_no_out <= register_no_in;
-				MemtoReg_out <= MemtoReg_in;
-				RegWrite_out <= RegWrite_in;
+				wb_MemtoReg_out <= wb_MemtoReg_in;
+				wb_RegWrite_out <= wb_RegWrite_in;
 			end if;
 		end if;
 end process;

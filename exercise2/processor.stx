@@ -1,0 +1,98 @@
+Release 12.4 - xst M.81d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Z:/TDT4255/exercise2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to Z:/TDT4255/exercise2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\TDT4255\exercise2\full_adder.vhd" into library work
+Parsing entity <full_adder>.
+Parsing architecture <Behavioral> of entity <full_adder>.
+Parsing VHDL file "\TDT4255\exercise2\mips_constant_pkg.vhd" into library work
+Parsing package <MIPS_CONSTANT_PKG>.
+Parsing VHDL file "\TDT4255\exercise2\alu_1bit.vhd" into library work
+Parsing entity <alu_1bit>.
+Parsing architecture <Behavioral> of entity <alu_1bit>.
+Parsing VHDL file "\TDT4255\exercise2\SignExtend.vhd" into library work
+Parsing entity <SignExtend>.
+Parsing architecture <Behavioral> of entity <signextend>.
+Parsing VHDL file "\TDT4255\exercise2\register_file.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <Behavioral> of entity <register_file>.
+Parsing VHDL file "\TDT4255\exercise2\pc.vhd" into library work
+Parsing entity <pc>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "\TDT4255\exercise2\mem_wb.vhd" into library work
+Parsing entity <mem_wb>.
+Parsing architecture <Behavioral> of entity <mem_wb>.
+Parsing VHDL file "\TDT4255\exercise2\if_id.vhd" into library work
+Parsing entity <if_id>.
+Parsing architecture <Behavioral> of entity <if_id>.
+Parsing VHDL file "\TDT4255\exercise2\id_ex.vhd" into library work
+Parsing entity <id_ex>.
+Parsing architecture <Behavioral> of entity <id_ex>.
+Parsing VHDL file "\TDT4255\exercise2\ex_mem.vhd" into library work
+Parsing entity <ex_mem>.
+Parsing architecture <Behavioral> of entity <ex_mem>.
+Parsing VHDL file "\TDT4255\exercise2\ControlUnit.vhd" into library work
+Parsing entity <ControlUnit>.
+Parsing architecture <Behavioral> of entity <controlunit>.
+Parsing VHDL file "\TDT4255\exercise2\ALUControl.vhd" into library work
+Parsing entity <ALUControl>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
+Parsing VHDL file "\TDT4255\exercise2\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "\TDT4255\exercise2\adder.vhd" into library work
+Parsing entity <adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "\TDT4255\exercise2\processor.vhd" into library work
+Parsing entity <processor>.
+Parsing architecture <Behavioral> of entity <processor>.
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.17 secs
+ 
+--> 
+
+Total memory usage is 189404 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

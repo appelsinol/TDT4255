@@ -1,0 +1,907 @@
+# //  ModelSim SE 6.6d Nov  1 2010 
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do \{do \{tb_cpu.fdo\}\} 
+# ** Error: (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+do tb_cpu.fdo
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# ** Error: processor.vhd(544): Cannot read output "dmem_write_enable".
+# ** Error: processor.vhd(623): VHDL Compiler exiting
+# ** Error: C:/modeltech_6.6d/win32/vcom failed.
+# Error in macro ./tb_cpu.fdo line 37
+# C:/modeltech_6.6d/win32/vcom failed.
+#     while executing
+# "vcom -explicit  -93 "processor.vhd""
+do tb_cpu.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity memory
+# -- Compiling architecture behavioral of memory
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity com
+# -- Compiling architecture behavioral of com
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity toplevel
+# -- Compiling architecture behavioral of toplevel
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_cpu
+# -- Compiling architecture behavior of tb_cpu
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_cpu 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: processor.vhd(491): (vopt-1130) Port "memwrite_in" of entity "id_ex" is not in the component being instantiated.
+# ** Error: id_ex.vhd(75): Vopt Compiler exiting
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./tb_cpu.fdo PAUSED at line 45
+do tb_cpu.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# ** Error: processor.vhd(479): (vcom-1136) Unknown identifier "memwrite_in".
+# ** Error: processor.vhd(623): VHDL Compiler exiting
+# ** Error: C:/modeltech_6.6d/win32/vcom failed.
+# Error in macro ./tb_cpu.fdo line 37
+# C:/modeltech_6.6d/win32/vcom failed.
+#     while executing
+# "vcom -explicit  -93 "processor.vhd""
+do tb_cpu.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity memory
+# -- Compiling architecture behavioral of memory
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity com
+# -- Compiling architecture behavioral of com
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity toplevel
+# -- Compiling architecture behavioral of toplevel
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_cpu
+# -- Compiling architecture behavior of tb_cpu
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_cpu 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "com(behavioral)".
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cpu(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.mips_constant_pkg
+# Loading work.toplevel(behavioral)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.com(behavioral)#1
+# Loading work.memory(behavioral)#1
+# Loading work.processor(behavioral)#1
+# Loading work.register_file(behavioral)#1
+# Loading work.alucontrol(behavioral)#1
+# Loading work.adder(behavioral)#1
+# Loading work.full_adder(behavioral)#1
+# Loading work.signextend(behavioral)#1
+# Loading work.controlunit(behavioral)#1
+# Loading work.alu(behavioral)#1
+# Loading work.alu_1bit(behavioral)#1
+# Loading work.pc(behavioral)#1
+# Loading work.if_id(behavioral)#1
+# Loading work.id_ex(behavioral)#1
+# Loading work.ex_mem(behavioral)#1
+# Loading work.mem_wb(behavioral)#1
+# ** Warning: (vsim-8683) Uninitialized out port /tb_cpu/uut/mips_sc_processor/id_ex_imp/memwrite_out has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /tb_cpu
+# Updating msgviewer database...
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 2  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 4  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# Updating msgviewer database...
+run 100 us
+# Updating msgviewer database...
+add wave sim:/tb_cpu/uut/mips_sc_processor/*
+run 100 us
+# Updating msgviewer database...
+run 100 us
+# Updating msgviewer database...
+do tb_cpu.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity memory
+# -- Compiling architecture behavioral of memory
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity com
+# -- Compiling architecture behavioral of com
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity toplevel
+# -- Compiling architecture behavioral of toplevel
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_cpu
+# -- Compiling architecture behavior of tb_cpu
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_cpu 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cpu(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.mips_constant_pkg
+# Loading work.toplevel(behavioral)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.com(behavioral)#1
+# Loading work.memory(behavioral)#1
+# Loading work.processor(behavioral)#1
+# Loading work.register_file(behavioral)#1
+# Loading work.alucontrol(behavioral)#1
+# Loading work.adder(behavioral)#1
+# Loading work.full_adder(behavioral)#1
+# Loading work.signextend(behavioral)#1
+# Loading work.controlunit(behavioral)#1
+# Loading work.alu(behavioral)#1
+# Loading work.alu_1bit(behavioral)#1
+# Loading work.pc(behavioral)#1
+# Loading work.if_id(behavioral)#1
+# Loading work.id_ex(behavioral)#1
+# Loading work.ex_mem(behavioral)#1
+# Loading work.mem_wb(behavioral)#1
+# ** Warning: (vsim-8683) Uninitialized out port /tb_cpu/uut/mips_sc_processor/id_ex_imp/memwrite_out has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /tb_cpu
+# Updating msgviewer database...
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 2  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 4  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# Updating msgviewer database...
+run 100 us
+# Updating msgviewer database...
+add wave sim:/tb_cpu/uut/mips_sc_processor/*
+run 100 us
+# Updating msgviewer database...
+do tb_cpu.fdo
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mips_constant_pkg
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_1bit
+# -- Compiling architecture behavioral of alu_1bit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity signextend
+# -- Compiling architecture behavioral of signextend
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity pc
+# -- Compiling architecture behavioral of pc
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture behavioral of mem_wb
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture behavioral of if_id
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture behavioral of id_ex
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture behavioral of ex_mem
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity controlunit
+# -- Compiling architecture behavioral of controlunit
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alucontrol
+# -- Compiling architecture behavioral of alucontrol
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity adder
+# -- Compiling architecture behavioral of adder
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mips_constant_pkg
+# -- Compiling entity processor
+# -- Compiling architecture behavioral of processor
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity memory
+# -- Compiling architecture behavioral of memory
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity com
+# -- Compiling architecture behavioral of com
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package mips_constant_pkg
+# -- Compiling entity toplevel
+# -- Compiling architecture behavioral of toplevel
+# Model Technology ModelSim SE vcom 6.6d Compiler 2010.11 Nov  1 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_cpu
+# -- Compiling architecture behavior of tb_cpu
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb_cpu 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cpu(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.mips_constant_pkg
+# Loading work.toplevel(behavioral)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.com(behavioral)#1
+# Loading work.memory(behavioral)#1
+# Loading work.processor(behavioral)#1
+# Loading work.register_file(behavioral)#1
+# Loading work.alucontrol(behavioral)#1
+# Loading work.adder(behavioral)#1
+# Loading work.full_adder(behavioral)#1
+# Loading work.signextend(behavioral)#1
+# Loading work.controlunit(behavioral)#1
+# Loading work.alu(behavioral)#1
+# Loading work.alu_1bit(behavioral)#1
+# Loading work.pc(behavioral)#1
+# Loading work.if_id(behavioral)#1
+# Loading work.id_ex(behavioral)#1
+# Loading work.ex_mem(behavioral)#1
+# Loading work.mem_wb(behavioral)#1
+# ** Warning: (vsim-8683) Uninitialized out port /tb_cpu/uut/mips_sc_processor/id_ex_imp/memwrite_out has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /tb_cpu
+# Updating msgviewer database...
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/mips_sc_processor/register_imp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 2  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 3  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ns  Iteration: 4  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ns  Iteration: 1  Instance: /tb_cpu/uut/inst_mem
+# Updating msgviewer database...
+add wave sim:/tb_cpu/uut/mips_sc_processor/*
+run 20 us
+# Updating msgviewer database...

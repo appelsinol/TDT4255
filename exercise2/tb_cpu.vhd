@@ -151,7 +151,7 @@
           -- insert stimulus here
 
                    
-                    -- INSTR: WRITE DATA TO DMEM : addr1 = 8, addr 2 = 2
+          -- INSTR: WRITE DATA TO DMEM : addr1 = 8, addr 2 = 2
                    
           command <= CMD_WD;                                     
           bus_address_in <= addr1;
@@ -198,7 +198,7 @@
           wait for clk_period*3;
                    
                     -- INSTR-3: SUB (R3 = R1 + R2) : SUB $3 $1 $2
-                    command <= CMD_WI;                                     
+          command <= CMD_WI;                                     
           bus_address_in <= addr3;
           bus_data_in <= ADD;
           wait for clk_period*3;
@@ -208,104 +208,104 @@
           bus_data_in <= zero;
           wait for clk_period*3;
                    
-                    -- INSTR-4: STORE TO DMEM : SW $3 $0(5)
-                    command <= CMD_WI;                                     
-          bus_address_in <= addr4;
-          bus_data_in <= SW;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-     
-              -- INSTR-5: 
-          command <= CMD_WI;
-          bus_address_in <= addr5;
-          bus_data_in <= SUB;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-6: OR $5 $1 $2
-          command <= CMD_WI;
-          bus_address_in <= addr6;
-          bus_data_in <= COMMAND_OR;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-7: AND $6 $1 $2
-          command <= CMD_WI;
-          bus_address_in <= addr7;
-          bus_data_in <= COMMAND_AND;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-8: SLT $4 $5 $6
-          command <= CMD_WI;
-          bus_address_in <= addr8;
-          bus_data_in <= SLT;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-9: BEQ $4 $5 2
-          command <= CMD_WI;
-          bus_address_in <= addr9;
-          bus_data_in <= BEQ;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-10: LDI $7 05
-          command <= CMD_WI;
-          bus_address_in <= addr10;
-          bus_data_in <= LDI_1;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-11: JMP address 12
-          command <= CMD_WI;
-          bus_address_in <= addr11;
-          bus_data_in <= JMP;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
-             
-              -- INSTR-12: LDI $4 05
-          command <= CMD_WI;
-          bus_address_in <= addr12;
-          bus_data_in <= SW1;
-          wait for clk_period*3;
-         
-          command <= CMD_IDLE;                                     
-          bus_address_in <= zero;
-          bus_data_in <= zero;
-          wait for clk_period*3;
+--                    -- INSTR-4: STORE TO DMEM : SW $3 $0(5)
+--                    command <= CMD_WI;                                     
+--          bus_address_in <= addr4;
+--          bus_data_in <= SW;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--     
+--              -- INSTR-5: 
+--          command <= CMD_WI;
+--          bus_address_in <= addr5;
+--          bus_data_in <= SUB;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-6: OR $5 $1 $2
+--          command <= CMD_WI;
+--          bus_address_in <= addr6;
+--          bus_data_in <= COMMAND_OR;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-7: AND $6 $1 $2
+--          command <= CMD_WI;
+--          bus_address_in <= addr7;
+--          bus_data_in <= COMMAND_AND;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-8: SLT $4 $5 $6
+--          command <= CMD_WI;
+--          bus_address_in <= addr8;
+--          bus_data_in <= SLT;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-9: BEQ $4 $5 2
+--          command <= CMD_WI;
+--          bus_address_in <= addr9;
+--          bus_data_in <= BEQ;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-10: LDI $7 05
+--          command <= CMD_WI;
+--          bus_address_in <= addr10;
+--          bus_data_in <= LDI_1;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-11: JMP address 12
+--          command <= CMD_WI;
+--          bus_address_in <= addr11;
+--          bus_data_in <= JMP;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
+--             
+--              -- INSTR-12: LDI $4 05
+--          command <= CMD_WI;
+--          bus_address_in <= addr12;
+--          bus_data_in <= SW1;
+--          wait for clk_period*3;
+--         
+--          command <= CMD_IDLE;                                     
+--          bus_address_in <= zero;
+--          bus_data_in <= zero;
+--          wait for clk_period*3;
                     -- NOTHING               TODO: Increment addresses
                     command <= CMD_WI;                                     
           bus_address_in <= addr17;

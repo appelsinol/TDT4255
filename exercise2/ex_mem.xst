@@ -1,5 +1,5 @@
-set -tmpdir "M:/ex/TDT4255/exercise2/xst/projnav.tmp"
-set -xsthdpdir "M:/ex/TDT4255/exercise2/xst"
+set -tmpdir "Z:/TDT4255/exercise2/xst/projnav.tmp"
+set -xsthdpdir "Z:/TDT4255/exercise2/xst"
 run -compileonly yes
 -p xc6slx16-2-csg324
 -top ex_mem

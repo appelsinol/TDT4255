@@ -37,13 +37,13 @@ entity id_ex is
 	   CLK : in STD_LOGIC;
 		reset : in STD_LOGIC;
 		processor_en : in STD_LOGIC;
-		incremented_addr_in : in STD_LOGIC_VECTOR(31 downto 0);
+		ex_incremented_addr_in : in STD_LOGIC_VECTOR(31 downto 0);
 		read_data_1_in : in STD_LOGIC_VECTOR(31 downto 0);
 		read_data_2_in : in STD_LOGIC_VECTOR(31 downto 0);
 		sign_extend_in : in STD_LOGIC_VECTOR(31 downto 0);
 		instruction_20_16_in : in STD_LOGIC_VECTOR(4 downto 0);
 		instruction_15_11_in : in STD_LOGIC_VECTOR(4 downto 0);
-		incremented_addr_out : out STD_LOGIC_VECTOR(31 downto 0);
+		ex_incremented_addr_out : out STD_LOGIC_VECTOR(31 downto 0);
 		read_data_1_out : out STD_LOGIC_VECTOR(31 downto 0);
 		read_data_2_out : out STD_LOGIC_VECTOR(31 downto 0);
 		sign_extend_out : out STD_LOGIC_VECTOR(31 downto 0);
@@ -78,7 +78,7 @@ begin
 		pipe_process : process(clk)
 		begin
 		if (reset = '1') then 
-		   incremented_addr_out <= ZERO32b;
+		   ex_incremented_addr_out <= ZERO32b;
 		   read_data_1_out <= ZERO32b;
 		   read_data_2_out <= ZERO32b;
 			sign_extend_out <= ZERO32b;
@@ -94,7 +94,7 @@ begin
 		
 		elsif (rising_edge(clk)) then
 			if(processor_en = '1') then
-				incremented_addr_out <= incremented_addr_in; 	
+				ex_incremented_addr_out <= ex_incremented_addr_in; 	
 				read_data_1_out <= read_data_1_in;
 				read_data_2_out <= read_data_2_in;
 				sign_extend_out <= sign_extend_in;

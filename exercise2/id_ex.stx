@@ -1,12 +1,12 @@
 Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to M:/ex/TDT4255/exercise2/xst/projnav.tmp
+--> Parameter TMPDIR set to Z:/TDT4255/exercise2/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
---> Parameter xsthdpdir set to M:/ex/TDT4255/exercise2/xst
+--> Parameter xsthdpdir set to Z:/TDT4255/exercise2/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -39,9 +39,9 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "\ex\TDT4255\exercise2\mips_constant_pkg.vhd" into library work
+Parsing VHDL file "\TDT4255\exercise2\mips_constant_pkg.vhd" into library work
 Parsing package <MIPS_CONSTANT_PKG>.
-Parsing VHDL file "\ex\TDT4255\exercise2\id_ex.vhd" into library work
+Parsing VHDL file "\TDT4255\exercise2\id_ex.vhd" into library work
 Parsing entity <id_ex>.
 Parsing architecture <Behavioral> of entity <id_ex>.
 
@@ -51,7 +51,7 @@ Total CPU time to Xst completion: 3.20 secs
  
 --> 
 
-Total memory usage is 187740 kilobytes
+Total memory usage is 187036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

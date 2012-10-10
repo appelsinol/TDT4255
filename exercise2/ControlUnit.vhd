@@ -46,7 +46,7 @@ entity ControlUnit is
 			  MemWrite : out  STD_LOGIC;   
            Branch : out  STD_LOGIC;
            ALUOp : out  STD_LOGIC_VECTOR(1 downto 0);
-			  PCwrite : out STD_LOGIC;
+--			  PCwrite : out STD_LOGIC;
            Jump : out STD_LOGIC);
 end  ControlUnit;
 
@@ -55,31 +55,32 @@ end  ControlUnit;
 architecture Behavioral of ControlUnit is
 
 -- signal allocation according from the book
-signal current_state,next_state:state_type;
+--signal current_state,next_state:state_type;
+--
+--begin
+--		state_process : process(clk,reset)
+--		begin
+--		if (reset='1') then
+--			current_state <= STALL;
+--	
+--		elsif (rising_edge(clk)) then
+--			if(processor_en = '1') then
+--				current_state <= next_state; 		
+--			end if;
+--		end if;
+--end process;
+--	
+begin			
 
-begin
-		state_process : process(clk,reset)
-		begin
-		if (reset='1') then
-			current_state <= STALL;
-	
-		elsif (rising_edge(clk)) then
-			if(processor_en = '1') then
-				current_state <= next_state; 		
-			end if;
-		end if;
-end process;
-				
-
-	control_process : process(current_state,opcode,processor_en)
+	control_process : process(opcode,processor_en)
 	begin
 
 				
-	if(current_state = fetch and processor_en = '1') then
-		next_state <= EXEC;
-		PCwrite <= '0';
-  end if;
-	if(current_state = EXEC and processor_en = '1') then
+--	if(current_state = fetch and processor_en = '1') then
+--		next_state <= EXEC;
+--		PCwrite <= '0';
+--  end if;
+	if(processor_en = '1') then
 		if opcode = "000000" then -- control signal for R instructions.
 			RegDst <= '1';
 			ALUSrc <= '0';
@@ -90,11 +91,8 @@ end process;
 			Branch <= '0';
 			ALUOp <= "10";
 			Jump <= '0';
-			next_state <= fetch;
-			PCwrite <= '1';
-		
-			  
-			  
+--			next_state <= fetch;
+--			PCwrite <= '1';
 		elsif opcode = "100011" then   -- control signal for load word.
 			RegDst <= '0';
 			ALUSrc <= '1';
@@ -105,8 +103,8 @@ end process;
 			Branch <= '0';
 			ALUOp <= "00";
 			Jump <= '0';
-			next_state <= STALL;
-			PCwrite <='0';
+--			next_state <= STALL;
+--			PCwrite <='0';
 			
        elsif opcode = "101011" then  -- control singal for save word.
 			RegDst <= '0';
@@ -118,8 +116,8 @@ end process;
 			Branch <= '0';
 			ALUOp <= "00";
 			Jump <= '0';
-			next_state <= STALL;
-			PCwrite <='0';
+--			next_state <= STALL;
+--			PCwrite <='0';
 		
 			 
 			  
@@ -133,8 +131,8 @@ end process;
 			Branch <= '1';
 			ALUOp <= "01";
 			Jump <= '0';
-			next_state <= fetch;
-			PCwrite <='1';
+--			next_state <= fetch;
+--			PCwrite <='1';
 			
 		elsif opcode = "001111" then  -- control singal for LDI.
 			RegDst <= '1';
@@ -146,9 +144,9 @@ end process;
 			Branch <= '0';
 			ALUOp <= "00";
 			Jump <= '0';
-			next_state <= fetch;
-			PCwrite <='1';
-			
+--			next_state <= fetch;
+--			PCwrite <='1';
+		
 		 else --opcode = "000010" then  -- control singal for jump.
 			RegDst <= '0';
 			ALUSrc <= '0';
@@ -159,12 +157,12 @@ end process;
 			Branch <= '0';
 			ALUOp <= "00";
 			Jump <= '1';
-			next_state <= fetch;
-			PCwrite <='1';
+--			next_state <= fetch;
+--			PCwrite <='1';
 		end if;
-	elsif(current_state = STALL and processor_en = '1') then
-          next_state<= fetch;
-          PCwrite <='1';
+--	elsif(current_state = STALL and processor_en = '1') then
+--          next_state<= fetch;
+--          PCwrite <='1';
 	end if; 
 	
 	end process;

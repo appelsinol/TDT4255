@@ -1,12 +1,12 @@
 Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to M:/ex/TDT4255/exercise2/xst/projnav.tmp
+--> Parameter TMPDIR set to Z:/TDT4255/exercise2/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
---> Parameter xsthdpdir set to M:/ex/TDT4255/exercise2/xst
+--> Parameter xsthdpdir set to Z:/TDT4255/exercise2/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -39,19 +39,21 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "\ex\TDT4255\exercise2\mips_constant_pkg.vhd" into library work
+Parsing VHDL file "\TDT4255\exercise2\mips_constant_pkg.vhd" into library work
 Parsing package <MIPS_CONSTANT_PKG>.
-Parsing VHDL file "\ex\TDT4255\exercise2\ex_mem.vhd" into library work
+Parsing VHDL file "\TDT4255\exercise2\ex_mem.vhd" into library work
 Parsing entity <ex_mem>.
 Parsing architecture <Behavioral> of entity <ex_mem>.
-ERROR:HDLCompiler:69 - "\ex\TDT4255\exercise2\ex_mem.vhd" Line 68: <reset> is not declared.
-ERROR:HDLCompiler:854 - "\ex\TDT4255\exercise2\ex_mem.vhd" Line 64: Unit <behavioral> ignored due to previous errors.
-VHDL file \ex\TDT4255\exercise2\ex_mem.vhd ignored due to errors
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.20 secs
+ 
 --> 
 
-Total memory usage is 187740 kilobytes
+Total memory usage is 187164 kilobytes
 
-Number of errors   :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

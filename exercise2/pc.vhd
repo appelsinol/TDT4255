@@ -30,7 +30,7 @@ use WORK.MIPS_CONSTANT_PKG.ALL;
 entity pc is
     Port ( 
 			  clk : in  STD_LOGIC;
-			  pc_en : in STD_LOGIC;
+--			  pc_en : in STD_LOGIC;
            reset : in  STD_LOGIC;
 			  pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
            pc_out : out  STD_LOGIC_VECTOR(31 downto 0));
@@ -49,9 +49,9 @@ begin
 					if reset = '1' then
                 pc_out <= (others =>'0');
 					else
-						if pc_en = '1' then 
+--						if pc_en = '1' then 
 							PC_OUT <= pc_in;
-						end if;
+--						end if;
 					end if;
 				end if;
     end process;

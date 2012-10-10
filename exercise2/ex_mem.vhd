@@ -36,17 +36,17 @@ entity ex_mem is
 				reset : in STD_LOGIC;	
 			  processor_en : in STD_LOGIC;
 			  -- Write back control lines
-			  RegWrite_in : in  STD_LOGIC;
-			  MemtoReg_in : in  STD_LOGIC;
-			  RegWrite_out : out  STD_LOGIC;
-			  MemtoReg_out : out  STD_LOGIC;
+			  mem_RegWrite_in : in  STD_LOGIC;
+			  mem_MemtoReg_in : in  STD_LOGIC;
+			  mem_RegWrite_out : out  STD_LOGIC;
+			  mem_MemtoReg_out : out  STD_LOGIC;
 			  -- Memory State control lines
-			  Branch_in : in  STD_LOGIC;
-			  MemRead_in : in  STD_LOGIC;
-			  MemWrite_in : in  STD_LOGIC;
-			  Branch_out : out  STD_LOGIC;
-			  MemRead_out : out  STD_LOGIC;
-			  MemWrite_out : out  STD_LOGIC;
+			  mem_Branch_in : in  STD_LOGIC;
+			  mem_MemRead_in : in  STD_LOGIC;
+			  mem_MemWrite_in : in  STD_LOGIC;
+			  mem_Branch_out : out  STD_LOGIC;
+			  mem_MemRead_out : out  STD_LOGIC;
+			  mem_MemWrite_out : out  STD_LOGIC;
 			  --input lines for EX_MEM pipeline
 			  add_result_in : in STD_LOGIC_VECTOR(31 downto 0);
 			  FLAGS_in		: in ALU_FLAGS;
@@ -67,11 +67,11 @@ begin
 		ex_mem_pipeline : process(clk)
 		begin
 		if (reset = '1') then
-			 RegWrite_out <= '0';
-			 MemtoReg_out <= '0';
-			 Branch_out <= '0';
-			 MemRead_out <= '0';
-			 MemWrite_out <=  '0';
+			 mem_RegWrite_out <= '0';
+			 mem_MemtoReg_out <= '0';
+			 mem_Branch_out <= '0';
+			 mem_MemRead_out <= '0';
+			 mem_MemWrite_out <=  '0';
 			 add_result_out <= ZERO32b;
 			 alu_result_out <= ZERO32b;
 			 FLAGS_out <= FLAGS_in;
@@ -79,11 +79,11 @@ begin
 			 mux_out <= mux_in;
 		elsif rising_edge(clk)then
 			if(processor_en = '1') then
-			 RegWrite_out <= RegWrite_in;
-			 MemtoReg_out <= MemtoReg_in;
-			 Branch_out <= Branch_in;
-			 MemRead_out <= MemRead_in;
-			 MemWrite_out <=  MemWrite_in;
+			 mem_RegWrite_out <= mem_RegWrite_in;
+			 mem_MemtoReg_out <= mem_MemtoReg_in;
+			 mem_Branch_out <= mem_Branch_in;
+			 mem_MemRead_out <= mem_MemRead_in;
+			 mem_MemWrite_out <=  mem_MemWrite_in;
 			 add_result_out <= add_result_in;
 			 alu_result_out <= alu_result_in;
 			 FLAGS_out <= FLAGS_in;

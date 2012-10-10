@@ -85,7 +85,7 @@ architecture Behavioral of processor is
     Port ( 
 			  clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-		     pc_en : in STD_LOGIC;
+--		     pc_en : in STD_LOGIC;
 			  pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
            pc_out : out  STD_LOGIC_VECTOR(31 downto 0));
   end component pc;
@@ -105,7 +105,7 @@ architecture Behavioral of processor is
 			  MemWrite : out  STD_LOGIC;
            Branch : out  STD_LOGIC;
            ALUOp : out  STD_LOGIC_VECTOR(1 downto 0);
-			  PCwrite : out STD_LOGIC;
+--			  PCwrite : out STD_LOGIC;
            Jump : out STD_LOGIC);
 	end component ControlUnit;
 
@@ -146,13 +146,114 @@ architecture Behavioral of processor is
 	);
 	end component ALUControl;
 
-component JumpShift is
+--component JumpShift is
+--	PORT(
+--		pc_4_instruction : in STD_LOGIC_VECTOR(31 downto 0);
+--		immediate_ins : in STD_LOGIC_VECTOR(25 downto 0);
+--		after_jump_instruction : out STD_LOGIC_VECTOR(31 downto 0)
+--		);
+--end component JumpShift;
+
+component if_id is
 	PORT(
-		pc_4_instruction : in STD_LOGIC_VECTOR(31 downto 0);
-		immediate_ins : in STD_LOGIC_VECTOR(25 downto 0);
-		after_jump_instruction : out STD_LOGIC_VECTOR(31 downto 0)
-		);
-end component JumpShift;
+	   CLK : in STD_LOGIC;
+		reset : in STD_LOGIC;
+		processor_en : in STD_LOGIC;
+		incremented_addr_in : in STD_LOGIC_VECTOR(31 downto 0);
+		instruction_data_in : in STD_LOGIC_VECTOR(31 downto 0);
+		incremented_addr_out : out STD_LOGIC_VECTOR(31 downto 0);
+		instruction_data_out : out STD_LOGIC_VECTOR(31 downto 0)
+	);
+end component if_id;
+
+component id_ex is
+	PORT(
+	    CLK : in STD_LOGIC;
+		reset : in STD_LOGIC;
+		processor_en : in STD_LOGIC;
+		ex_incremented_addr_in : in STD_LOGIC_VECTOR(31 downto 0);
+		read_data_1_in : in STD_LOGIC_VECTOR(31 downto 0);
+		read_data_2_in : in STD_LOGIC_VECTOR(31 downto 0);
+		sign_extend_in : in STD_LOGIC_VECTOR(31 downto 0);
+		instruction_20_16_in : in STD_LOGIC_VECTOR(4 downto 0);
+		instruction_15_11_in : in STD_LOGIC_VECTOR(4 downto 0);
+		ex_incremented_addr_out : out STD_LOGIC_VECTOR(31 downto 0);
+		read_data_1_out : out STD_LOGIC_VECTOR(31 downto 0);
+		read_data_2_out : out STD_LOGIC_VECTOR(31 downto 0);
+		sign_extend_out : out STD_LOGIC_VECTOR(31 downto 0);
+		instruction_20_16_out : out STD_LOGIC_VECTOR(4 downto 0);
+		instruction_15_11_out : out STD_LOGIC_VECTOR(4 downto 0);
+		RegDst_in : in  STD_LOGIC;
+	   ALUSrc_in : in  STD_LOGIC;
+		MemtoReg_in : in  STD_LOGIC;
+		RegWrite_in : in  STD_LOGIC;
+	   MemRead_in : in  STD_LOGIC;
+-- TODO check the memwrite signal is necessary
+		MemWrite_in : in  STD_LOGIC;   
+      Branch_in : in  STD_LOGIC;
+      ALUOp_in : in  STD_LOGIC_VECTOR(1 downto 0);
+     
+		RegDst_out : out  STD_LOGIC;
+	   ALUSrc_out: out  STD_LOGIC;
+		MemtoReg_out : out  STD_LOGIC;
+		RegWrite_out : out  STD_LOGIC;
+	   MemRead_out : out  STD_LOGIC;
+		MemWrite_out : out  STD_LOGIC;   
+      Branch_out : out  STD_LOGIC;
+      ALUOp_out : out  STD_LOGIC_VECTOR(1 downto 0)
+		
+	);
+end component id_ex;
+
+component ex_mem is
+		PORT (CLK : in STD_LOGIC;
+				reset : in STD_LOGIC;	
+			  processor_en : in STD_LOGIC;
+			  -- Write back control lines
+			  mem_RegWrite_in : in  STD_LOGIC;
+			  mem_MemtoReg_in : in  STD_LOGIC;
+			  mem_RegWrite_out : out  STD_LOGIC;
+			  mem_MemtoReg_out : out  STD_LOGIC;
+			  -- Memory State control lines
+			  mem_Branch_in : in  STD_LOGIC;
+			  mem_MemRead_in : in  STD_LOGIC;
+			  mem_MemWrite_in : in  STD_LOGIC;
+			  mem_Branch_out : out  STD_LOGIC;
+			  mem_MemRead_out : out  STD_LOGIC;
+			  mem_MemWrite_out : out  STD_LOGIC;
+			  --input lines for EX_MEM pipeline
+			  add_result_in : in STD_LOGIC_VECTOR(31 downto 0);
+			  FLAGS_in		: in ALU_FLAGS;
+			  alu_result_in : in STD_LOGIC_VECTOR(31 downto 0);
+			  read_data_2_in : in STD_LOGIC_VECTOR(31 downto 0);
+			  mux_in	:  in STD_LOGIC_VECTOR(4 downto 0);
+			   --Output lines for EX_MEM pipeline
+			  add_result_out : out STD_LOGIC_VECTOR(31 downto 0);
+			  FLAGS_out		: out ALU_FLAGS;
+			  alu_result_out : out STD_LOGIC_VECTOR(31 downto 0);
+			  read_data_2_out : out STD_LOGIC_VECTOR(31 downto 0);
+			  mux_out	:  out STD_LOGIC_VECTOR(4 downto 0)
+			  );
+end component ex_mem;
+
+component mem_wb is
+PORT(
+	   CLK : in STD_LOGIC;
+		reset : in STD_LOGIC;
+		processor_en : in STD_LOGIC;
+		data_memory_in : in STD_LOGIC_VECTOR(31 downto 0);
+		address_in : in STD_LOGIC_VECTOR(31 downto 0);
+		register_no_in : in STD_LOGIC_VECTOR(4 downto 0);
+		data_memory_out : out STD_LOGIC_VECTOR(31 downto 0);
+		address_out : out STD_LOGIC_VECTOR(31 downto 0);
+		register_no_out : out STD_LOGIC_VECTOR(4 downto 0);
+		wb_MemtoReg_in : in  STD_LOGIC;
+		wb_RegWrite_in : in  STD_LOGIC;
+		wb_MemtoReg_out : out  STD_LOGIC;
+		wb_RegWrite_out : out  STD_LOGIC
+	);
+end component mem_wb;
+
 
 ------- internal signal for connection of component ----------
 	
@@ -176,7 +277,7 @@ end component JumpShift;
 	signal branch_signal : STD_LOGIC;
 	signal aLUOp_signal : STD_LOGIC_VECTOR(1 downto 0);
 	signal jump_signal : STD_LOGIC;
-	signal PCwrite_signal: STD_LOGIC;
+--	signal PCwrite_signal: STD_LOGIC;
 
 -- signal for ALUcontrol	
 	signal ALUopcode : ALU_INPUT;
@@ -194,7 +295,7 @@ end component JumpShift;
 -- signal from memory to register
 	signal memory_to_register : STD_LOGIC_VECTOR(31 downto 0);
 -- signal for branch and zero
-	signal branch_and_zero : STD_LOGIC;
+	signal PCSrc: STD_LOGIC;
 	signal branched_result : STD_LOGIC_VECTOR(31 downto 0);
 	
 -- control signal for the R type instructions
@@ -204,7 +305,7 @@ end component JumpShift;
 
 
 -- signal pc part
-	signal pc_en_signal : STD_LOGIC;
+--	signal pc_en_signal : STD_LOGIC;
 	signal pc_in_result : STD_LOGIC_VECTOR(31 downto 0);
 	signal pc_out_internal : STD_LOGIC_VECTOR(31 downto 0);
 	signal pc_incremented : STD_LOGIC_VECTOR(31 downto 0);
@@ -213,14 +314,55 @@ end component JumpShift;
 	signal after_shift_adder_signal: STD_LOGIC_VECTOR(31 downto 0);
 	signal current_state:state_type;
 	
+-- signal for if/id pipeline
+	signal imem_data_in_out : STD_LOGIC_VECTOR(31 downto 0);
+	signal ins_15_11 : STD_LOGIC_VECTOR(4 downto 0);
+	signal pc_incremented_id : STD_LOGIC_VECTOR(31 downto 0);
 	
+-- signal for id/ex pipeline
+	signal MemWrite_enable : STD_LOGIC;
+	signal pc_incremented_ex : STD_LOGIC_VECTOR(31 downto 0);
+	signal ex_sign_extended_out : STD_LOGIC_VECTOR(31 downto 0);
+	signal ex_read_data_1 : STD_LOGIC_VECTOR(31 downto 0);
+	signal ex_read_data_2 : STD_LOGIC_VECTOR(31 downto 0);
+	signal ex_ins_20_16 : STD_LOGIC_VECTOR(4 downto 0);
+	signal ex_ins_15_11 : STD_LOGIC_VECTOR(4 downto 0);
+	signal ex_RegDst_out : STD_LOGIC;
+	signal ex_ALUSrc_out: STD_LOGIC;
+	signal ex_MemtoReg_out : STD_LOGIC;
+	signal ex_RegWrite_out : STD_LOGIC;
+	signal ex_MemRead_out : STD_LOGIC;
+	signal ex_MemWrite_out : STD_LOGIC;   
+   signal ex_Branch_out : STD_LOGIC;
+   signal ex_ALUOp_out : STD_LOGIC_VECTOR(1 downto 0);
+	
+-- signal for ex/mem pipeline
+	signal p_add_result : STD_LOGIC_VECTOR(31 downto 0);
+	signal FLAGS_out_mem : ALU_FLAGS;
+	signal alu_result_out_mem : STD_LOGIC_VECTOR(31 downto 0);
+	signal read_data_2_out_mem : STD_LOGIC_VECTOR(31 downto 0);
+	signal mux_out_mem : STD_LOGIC_VECTOR(4 downto 0);		
+	signal mem_RegWrite_out_wb : STD_LOGIC;
+	signal mem_MemtoReg_out_wb : STD_LOGIC;
+	signal mem_Branch_out_out : STD_LOGIC;
+	signal mem_MemRead_out_out : STD_LOGIC;
+	signal mem_MemWrite_out_out : STD_LOGIC;
+
+--signal for mem/wb pipeline
+	signal register_no_wb : STD_LOGIC_VECTOR(4 downto 0);	
+	signal wb_MemtoReg_out_result : STD_LOGIC;
+	signal wb_RegWrite_out_result : STD_LOGIC;
+	signal alu_to_register : STD_LOGIC_VECTOR(31 downto 0);
+	signal data_memory_to_register : STD_LOGIC_VECTOR(31 downto 0);
+
+
 begin
 
 	register_imp : register_file
 		PORT MAP(
 			CLK => clk,		
-			RESET	=> reset,			
-			RW	=> regWrite_signal,				
+			RESET	=> reset,		
+			RW	=> wb_RegWrite_out_result,				
 			RS_ADDR => ins_25_21_rs,
 			RT_ADDR => ins_20_16_rt,
 			RD_ADDR => write_register,
@@ -228,10 +370,11 @@ begin
 			RS	=> read_data_1,
 			RT	=> read_data_2
 		);
+		
 	alucontrol_imp : ALUControl
 		PORT MAP(
-		instr_15_0 => ins_15_0_add,
-		ALUop => aLUOp_signal,
+		instr_15_0 => ex_sign_extended_out(15 downto 0),
+		ALUop => ex_ALUOp_out,
 		ALUopcode => ALUopcode  
 		);
 
@@ -246,8 +389,8 @@ begin
 	
 	adder_branch : adder
 		PORT MAP(
-			X => pc_incremented,
-			Y => extened_32_address,
+			X => pc_incremented_ex,
+			Y => ex_sign_extended_out,
 			CIN => '0',
 		--	COUT => '0',
 			R => after_shift_adder_signal
@@ -273,103 +416,202 @@ begin
 			  MemWrite => dmem_write_enable,
            Branch => branch_signal,
            ALUOp => aLUOp_signal,
-			  PCwrite => PCwrite_signal,
+--			  PCwrite => PCwrite_signal,
            Jump => jump_signal
 		);
 	alu_imp : alu
 		PORT MAP(
-			X => read_data_1,
+			X => ex_read_data_1,
 			Y => alu_mux_result,			
-			ALU_IN => ALUopcode,
+			ALU_IN => ALUopcode ,
 			R => signalToMem_alu_result,
 			FLAGS	=> ALUflags	
 		);
+--TODO remove pc_En
 	PCregister : PC
 		PORT MAP(
 			  clk => clk,
            reset => reset,
-			  pc_en => pc_en_signal,
+--			  pc_en => pc_en_signal,
 			  pc_in => pc_in_result,
            pc_out => pc_out_internal
 		);
-	jumpshift_imp : JumpShift
-		PORT MAP(
-			pc_4_instruction => pc_incremented,
-			after_jump_instruction => jumped_instr,
-			immediate_ins => immediate_address 
-			);
+--	jumpshift_imp : JumpShift
+--		PORT MAP(
+--			pc_4_instruction => pc_incremented,
+--			after_jump_instruction => jumped_instr,
+--			immediate_ins => immediate_address 
+--			);
+			
+	if_id_imp : if_id
+	PORT MAP(
+				CLK => clk,
+				reset => reset,
+				processor_en => processor_enable,
+				incremented_addr_in => pc_incremented,
+				instruction_data_in => imem_data_in,
+				incremented_addr_out => pc_incremented_id,
+				instruction_data_out => imem_data_in_out
+	);
 	
+  id_ex_imp : id_ex
+	PORT MAP(
+	   CLK => clk,
+		reset => reset,
+		processor_en => processor_enable,
+		ex_incremented_addr_in => pc_incremented_id,
+		read_data_1_in => read_data_1,
+		read_data_2_in => read_data_2,
+		sign_extend_in => extened_32_address,
+		instruction_20_16_in => ins_20_16_rt,
+		instruction_15_11_in => ins_15_11,
+		ex_incremented_addr_out => pc_incremented_ex,
+		read_data_1_out => ex_read_data_1,
+		read_data_2_out => ex_read_data_2,
+		sign_extend_out => ex_sign_extended_out,
+		instruction_20_16_out => ex_ins_20_16,
+		instruction_15_11_out => ex_ins_15_11,
+		RegDst_in => regDst_signal,
+	   ALUSrc_in => aLUSrc_signal,
+		MemtoReg_in => memtoReg_signal,
+		RegWrite_in => regWrite_signal,
+	   MemRead_in => memRead_signal,
+		MemWrite_in => MemWrite_enable,
+      Branch_in => branch_signal,
+      ALUOp_in  => aLUOp_signal,
+     
+		RegDst_out => ex_RegDst_out,
+	   ALUSrc_out => ex_ALUSrc_out,
+		MemtoReg_out => ex_MemtoReg_out,
+		RegWrite_out => ex_RegWrite_out, 
+	   MemRead_out => ex_MemRead_out, 
+		MemWrite_out => dmem_write_enable,  
+      Branch_out => ex_Branch_out,
+      ALUOp_out => ex_ALUOp_out
+ );
+
+ ex_mem_imp : ex_mem
+		PORT MAP(CLK => clk,
+				reset => reset,
+			  processor_en  => processor_enable,
+			  -- Write back control lines
+			  mem_RegWrite_in  => ex_RegWrite_out, 
+			  mem_MemtoReg_in => ex_MemtoReg_out,
+			  mem_RegWrite_out => mem_RegWrite_out_wb,
+			  mem_MemtoReg_out => mem_MemtoReg_out_wb,
+			  -- Memory State control lines
+			  mem_Branch_in  => ex_Branch_out,
+			  mem_MemRead_in => ex_MemRead_out, 
+			  mem_MemWrite_in  => ex_MemWrite_out,
+			  mem_Branch_out => mem_Branch_out_out,
+			  mem_MemRead_out => mem_MemRead_out_out,
+			  mem_MemWrite_out => mem_MemWrite_out_out,
+			  --input lines for EX_MEM pipeline
+			  add_result_in => after_shift_adder_signal,
+			  FLAGS_in	=> ALUflags,
+			  alu_result_in => signalToMem_alu_result,
+			  read_data_2_in  => ex_read_data_2,
+			  mux_in	=> write_register,
+			   --Output lines for EX_MEM pipeline
+			  add_result_out => p_add_result,
+			  FLAGS_out		=> FLAGS_out_mem,
+			  alu_result_out => alu_result_out_mem,
+			  read_data_2_out => read_data_2_out_mem,
+			  mux_out => mux_out_mem
+			  );
+			  
+ mem_wb_imp : mem_wb
+PORT MAP(
+	   CLK => clk,
+		reset => reset,
+		processor_en => processor_enable,
+		data_memory_in => dmem_data_in,
+		address_in => alu_result_out_mem,
+		register_no_in => mux_out_mem,
+		data_memory_out => data_memory_to_register,
+		address_out => alu_to_register,
+		register_no_out => register_no_wb,
+		wb_MemtoReg_in => mem_MemtoReg_out_wb,
+		wb_RegWrite_in => mem_RegWrite_out_wb,
+		wb_MemtoReg_out => wb_MemtoReg_out_result,
+		wb_RegWrite_out => wb_RegWrite_out_result
+	);
+
+
+
 				
-	pc_en_signal <= PCwrite_signal or branch_and_zero;
+--	pc_en_signal <= PCwrite_signal or branch_and_zero;
+--	MemWrite_enable <= dmem_write_enable;
+	PCSrc <= mem_Branch_out_out and FLAGS_out_mem.ZERO;
 	
-	mux_register : process(imem_data_in,regDst_signal)
+	mux_register : process(ex_ins_20_16,ex_ins_15_11,ex_RegDst_out)
 	begin
-		if regDst_signal = '0' then
-			write_register <= imem_data_in(20 downto 16);
+		if ex_RegDst_out = '0' then
+			write_register <= ex_ins_20_16;
 		else
-			write_register <= imem_data_in(15 downto 11);
+			write_register <= ex_ins_15_11;
 		end if;
 	end process;
 	
-	mux_memToReg : process(dmem_data_in,signalToMem_alu_result, memtoReg_signal)
+	mux_memToReg : process(dmem_data_in,alu_result_out_mem, wb_MemtoReg_out_result)
 	begin
-		if memtoReg_signal = '1' then
+		if wb_MemtoReg_out_result = '1' then
 			memory_to_register <= dmem_data_in;
 		else
-			memory_to_register <= signalToMem_alu_result;
+			memory_to_register <= alu_result_out_mem;
 		end if;
 	end process;
 		
-	mux_alu : process(aLUSrc_signal,read_data_2,extened_32_address)
+	mux_alu : process(ex_ALUSrc_out,ex_read_data_2,ex_sign_extended_out)
 	begin
-		if aLUSrc_signal = '0' then
-			alu_mux_result <= read_data_2;
+		if ex_ALUSrc_out = '0' then
+			alu_mux_result <= ex_read_data_2;
 		else
-			alu_mux_result <= extened_32_address;
+			alu_mux_result <= ex_sign_extended_out;
 		end if;
 	end process;
 	
-	mux_add : process(after_shift_adder_signal,pc_incremented,branch_and_zero)
-	begin
-		if branch_and_zero = '1' then
-			branched_result <= after_shift_adder_signal;
-		else
-			branched_result <= pc_incremented;
-		end if;
-	end process;
+--	mux_add : process(after_shift_adder_signal,pc_incremented,branch_and_zero)
+--	begin
+--		if branch_and_zero = '1' then
+--			branched_result <= after_shift_adder_signal;
+--		else
+--			branched_result <= pc_incremented;
+--		end if;
+--	end process;
 	
-	mux_jump : process(branched_result,jumped_instr,jump_signal)
+	mux_branch : process(p_add_result,PCSrc,pc_incremented)
 	begin
-		if jump_signal = '1' then
-			pc_in_result <= jumped_instr;
+		if PCSrc = '1' then
+			pc_in_result <= pc_incremented;
 		else 
-			pc_in_result <= branched_result;
+			pc_in_result <= p_add_result;
 		end if;
 	end process;
 			
 			
-	branch_zero: process(branch_signal,ALUflags)
-	begin
-		branch_and_zero <= branch_signal and ALUflags.ZERO;
-	end process;
+
+
+		
+
 	
-	mapping_instruction_to_bus: process(imem_data_in,processor_enable)
+	mapping_instruction_to_bus: process(imem_data_in_out,processor_enable)
 	begin
 	if (processor_enable = '1') then
-	ins_31_26 <= imem_data_in(31 downto 26);
-	ins_25_21_rs <= imem_data_in(25 downto 21);
-	ins_20_16_rt <= imem_data_in(20 downto 16);
-	ins_15_0_add <= imem_data_in(15 downto 0);
-	immediate_address <= imem_data_in(25 downto 0);
+	ins_31_26 <= imem_data_in_out(31 downto 26);
+	ins_25_21_rs <= imem_data_in_out(25 downto 21);
+	ins_20_16_rt <= imem_data_in_out(20 downto 16);
+	ins_15_11 <= imem_data_in_out(15 downto 11);
+	ins_15_0_add <= imem_data_in_out(15 downto 0);
 	end if;
    end process;
 	
-	processor_re: process(processor_enable,read_data_2,signalToMem_alu_result)
+	processor_re: process(processor_enable,read_data_2_out_mem,alu_result_out_mem)
 	begin
 		if (processor_enable = '1') then
-				dmem_data_out <= read_data_2;
-				dmem_address <= signalToMem_alu_result;
-				dmem_address_wr <= signalToMem_alu_result;
+				dmem_data_out <= read_data_2_out_mem;
+				dmem_address <= alu_result_out_mem;
+				dmem_address_wr <= alu_result_out_mem;
 			end if;
 	end process;
 	
